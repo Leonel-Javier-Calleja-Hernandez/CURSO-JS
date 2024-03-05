@@ -11,7 +11,7 @@ git push -u origin main
 
 …o enviar un repositorio existente desde la línea de comando
 
-git remote add origin https://github.com/leoneljaviercallejahernandez/PROYECTOS-1.git
+git remote add origin https://github.com/Leonel-Javier-Calleja-Hernandez/PROYECTOS-1.git
 git branch -M main
 git push -u origin main
 
