@@ -1,0 +1,18 @@
+…o crear un nuevo repositorio en la línea de comando
+
+echo "# PROYECTOS-JS" >> README.md
+git init
+git add .
+git commit -m "G/05/03/2024::-"
+git branch -M main
+git remote add origin https://github.com/Leonel-Javier-Calleja-Hernandez/PROYECTOS-JS.git
+git push -u origin main
+
+
+…o enviar un repositorio existente desde la línea de comando
+
+git remote add origin https://github.com/leoneljaviercallejahernandez/PROYECTOS-JS.git
+git branch -M main
+git push -u origin main
+
+hola de nuevo ✌️
