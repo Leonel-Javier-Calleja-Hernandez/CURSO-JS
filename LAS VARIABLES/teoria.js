@@ -37,7 +37,7 @@ if (true){
 }
 alert ("si es " + numero)*/
 
-//NOTAS
+//NOTAS-TEXTO
 
 var A = 1
 var B = 2
@@ -56,3 +56,27 @@ function cambiarATexto() {
     B = C + A
     console.log(B)
 }
+//var ejemplo
+
+/*var hola = "hola"
+combiarIngles()
+
+function combiarIngles() {
+  var hola = "hello"
+  alert(hola)  
+}
+alert(hola)*/
+
+//let ejemplo
+ /*let hola ="hola"
+ if (true){
+    let hola ="hello"
+    alert(hola)
+ }
+ alert(hola)
+*/
+//const ejemplo
+/*const hola = "hola"
+hola = "hello"
+*/
+// el anterior da error por que las const no se pueden cambiar el valor
