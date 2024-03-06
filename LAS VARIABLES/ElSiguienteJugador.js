@@ -5,11 +5,22 @@ const nombreJugador3 = " calleja "
 var jugador = 1
 
 function iniciarJuego(){
-    alert("HOLA INICIAMOS")
-    let siguiente = document.getElementById("siguiente")
+    // alert("HOLA INICIAMOS")
+    let siguiente = document.getElementById("iniciar")
     siguiente.addEventListener('click',preparate)
-    
-    
+    let Mensajes = document.getElementById("MENSAJESInicio")
+
+    let parrafo =document.createElement('p')
+    parrafo.innerHTML= "HOLA INICIAMOS"
+
+    Mensajes.appendChild(parrafo)
+
+    let pestañaInicio = document.getElementById("pestañaInicio")
+    pestañaInicio.style.display = 'none' 
+    let pestañaSaludo = document.getElementById("pestañaSaludo")
+    pestañaSaludo.style.display = 'block' 
+    // pestañaSaludo.style.display = 'flex' 
+   
 }
 function preparate() {
     alert("PREPARATE")
@@ -17,8 +28,16 @@ function preparate() {
 }
 
 function cadena(){
-alert("Inicia el " + jugador)
-crearMensaje()
+    let pestañaInicio = document.getElementById("pestañaInicio")
+    pestañaInicio.style.display = 'block' 
+    let pestañaSaludo = document.getElementById("pestañaSaludo")
+    pestañaSaludo.style.display = 'none' 
+    // sectionSeleccionarAtaque.style.display = 'block' 
+    let siguiente = document.getElementById("siguiente")
+    siguiente.addEventListener('click',preparate)
+    
+    alert("Inicia el " + jugador)
+    crearMensaje()
 }
 
 function crearMensaje(){
