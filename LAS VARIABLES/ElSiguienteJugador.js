@@ -4,6 +4,7 @@ const nombreJugador3 = " CALLEJA "
 
 var jugador = 1
 
+
 function iniciarJuego(){
     let siguiente = document.getElementById("iniciar")
     siguiente.addEventListener('click',cadena)
@@ -36,9 +37,12 @@ function cadena(){
     let pestañaSaludo = document.getElementById("pestañaSaludo")
     pestañaSaludo.style.display = 'none' 
 
+    let jugadorNumero = document.getElementById('jugador').textContent = jugador
+    jugadorNumero = jugador
+
     let siguiente = document.getElementById("siguiente")
     siguiente.addEventListener('click',crearMensaje)
-    
+    console.log(jugador)
 }
 function preparate() {
     alert("PREPARATE")
@@ -99,7 +103,7 @@ function MensajeFinal() {
 }
 function reiniciar(){
     
-    alert("reiniciar")
+    location.reload()
 }
 
 window.addEventListener('load', iniciarJuego)
