@@ -1,65 +1,105 @@
-const nombreJugador1 = " leonel "
-const nombreJugador2 = " javier "
-const nombreJugador3 = " calleja "
+const nombreJugador1 = " LEONEL "
+const nombreJugador2 = " JAVIER "
+const nombreJugador3 = " CALLEJA "
 
 var jugador = 1
 
 function iniciarJuego(){
-    // alert("HOLA INICIAMOS")
     let siguiente = document.getElementById("iniciar")
-    siguiente.addEventListener('click',preparate)
+    siguiente.addEventListener('click',cadena)
+
     let Mensajes = document.getElementById("MENSAJESInicio")
 
     let parrafo =document.createElement('p')
-    parrafo.innerHTML= "HOLA INICIAMOS"
+    parrafo.innerHTML= "HOLA INICIAMOS 👇"
 
     Mensajes.appendChild(parrafo)
 
     let pestañaInicio = document.getElementById("pestañaInicio")
     pestañaInicio.style.display = 'none' 
+
+    let MENSAJESFinal = document.getElementById("MENSAJESFinal")
+    MENSAJESFinal.style.display = 'none' 
+
     let pestañaSaludo = document.getElementById("pestañaSaludo")
-    pestañaSaludo.style.display = 'block' 
+    pestañaSaludo.style.display = 'flex' 
     // pestañaSaludo.style.display = 'flex' 
    
 }
-function preparate() {
-    alert("PREPARATE")
-    cadena()
-}
+
 
 function cadena(){
+
     let pestañaInicio = document.getElementById("pestañaInicio")
-    pestañaInicio.style.display = 'block' 
+    pestañaInicio.style.display = 'flex' 
+
     let pestañaSaludo = document.getElementById("pestañaSaludo")
     pestañaSaludo.style.display = 'none' 
-    // sectionSeleccionarAtaque.style.display = 'block' 
+
     let siguiente = document.getElementById("siguiente")
-    siguiente.addEventListener('click',preparate)
+    siguiente.addEventListener('click',crearMensaje)
     
-    alert("Inicia el " + jugador)
+}
+function preparate() {
+    alert("PREPARATE")
+    // cadena()
     crearMensaje()
 }
 
 function crearMensaje(){
+
     let Mensajes = document.getElementById("MENSAJES")
 
     let parrafo =document.createElement('p')
-    parrafo.innerHTML= "el jugador "+ nombreJugador1 +" "+ jugador
+    parrafo.innerHTML= "El jugador "+ nombreJugador1 +" "+ jugador
 
-
-    //con Mensajes.appendChild(parrafo) se le invica a el html que por ".appendChild" inserte un "parrafo" que sea creado en cadena.js
     Mensajes.appendChild(parrafo)
-    MensajeFinal()
+    
+    if(jugador === 1 ){
+        let parrafo =document.createElement('p')
+        parrafo.innerHTML= "EL ULTIMO JUGADOR ES "+ nombreJugador1 +" TOCA SIGUIENTE 🙃 PARA CONTINUAR"
+
+        Mensajes.appendChild(parrafo)
+
+        let siguiente = document.getElementById("siguiente")
+        siguiente.addEventListener('click',MensajeFinal)
+
+
+
+    }else{
+        return;
+    }
+    
+ console.log(jugador)
+ console.log(parrafo)
+ alert("fin")
+
 }
+
 function MensajeFinal() {
 
+    let pestañaInicio = document.getElementById("MENSAJESFinal")
+    pestañaInicio.style.display = 'flex' 
+
+    let pestañaSaludo = document.getElementById("pestañaInicio")
+    pestañaSaludo.style.display = 'none' 
+
     let MensajesFin = document.getElementById("FIN")
+
     let parrafo =document.createElement('p')
 
     parrafo.innerHTML= "FIN DE EL JUEGO"
 
+    let siguiente = document.getElementById("reiniciar")
+    siguiente.addEventListener('click',reiniciar)
+   
     MensajesFin.appendChild(parrafo)
     console.log(MensajeFinal)
+
+}
+function reiniciar(){
+    
+    alert("reiniciar")
 }
 
 window.addEventListener('load', iniciarJuego)

@@ -9,6 +9,20 @@
     background-color: yellow;
     font-family: 'Anton', sans-serif;
 }
+
+#pestañaSaludo {
+    width: 1250px;
+    height: 1000px;
+    
+}
+
+#MENSAJESInicio{
+    text-align: center;
+    font-size: 40px;
+    width: 250px;
+    height: 150px;
+}
+
 h1 {
     background-color: #00BCD4;
     text-align: center;
@@ -40,4 +54,18 @@ button {
     height: 50px;
     border-radius: 20px;
     display: contents;
+}
+#MENSAJESFinal{
+    text-align: center;
+    font-size: 40px;
+    width: 1250px;
+    height: 1000px;
+}
+#reiniciar{
+    background-color: #240800;
+    width: 200px;
+    height: 80px;
+    border-radius: 20px;
+    margin: 10px;
+    font-family: 'Anton', sans-serif;
 }
