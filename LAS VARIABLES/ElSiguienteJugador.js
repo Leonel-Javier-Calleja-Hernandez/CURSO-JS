@@ -66,7 +66,7 @@ function crearMensaje(){
         Mensajes.appendChild(parrafo)
 
         let siguiente = document.getElementById("siguiente")
-        siguiente.addEventListener('click',MensajeFinal)
+        siguiente.addEventListener('click',cambiarJugadorDos)
 
 
 
@@ -74,10 +74,69 @@ function crearMensaje(){
         return;
     }
     
+    
  console.log(jugador)
  console.log(parrafo)
- alert("fin")
+//  alert("fin")
 
+}
+
+function cambiarJugadorDos() {
+    jugador = 2
+
+    let jugadorNumero = document.getElementById('jugador').textContent = jugador
+    jugadorNumero = jugador
+
+    let Mensajes = document.getElementById("MENSAJES")
+
+    let parrafo =document.createElement('p')
+    parrafo.innerHTML= "El jugador "+ nombreJugador2 +" "+ jugador
+
+    Mensajes.appendChild(parrafo)
+    
+    if(jugador === 2 ){
+        let parrafo =document.createElement('p')
+        parrafo.innerHTML= "EL ULTIMO JUGADOR ES "+ nombreJugador1 +" TOCA SIGUIENTE 🙃 PARA CONTINUAR"
+
+        Mensajes.appendChild(parrafo)
+
+        let siguiente = document.getElementById("siguiente")
+        siguiente.addEventListener('click',cambiarJugadorTres)
+
+
+
+    }else{
+        return;
+    }
+}
+
+function cambiarJugadorTres() {
+    jugador = 3
+
+    let jugadorNumero = document.getElementById('jugador').textContent = jugador
+    jugadorNumero = jugador
+
+    let Mensajes = document.getElementById("MENSAJES")
+
+    let parrafo =document.createElement('p')
+    parrafo.innerHTML= "El jugador "+ nombreJugador3 +" "+ jugador
+
+    Mensajes.appendChild(parrafo)
+    
+    if(jugador === 3 ){
+        let parrafo =document.createElement('p')
+        parrafo.innerHTML= "EL ULTIMO JUGADOR ES "+ nombreJugador1 +" TOCA SIGUIENTE 🙃 PARA CONTINUAR"
+
+        Mensajes.appendChild(parrafo)
+
+        let siguiente = document.getElementById("siguiente")
+        siguiente.addEventListener('click',MensajeFinal)
+
+
+
+    }else{
+        return;
+    }
 }
 
 function MensajeFinal() {
