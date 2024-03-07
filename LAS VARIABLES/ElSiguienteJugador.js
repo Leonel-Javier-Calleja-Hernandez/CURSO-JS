@@ -58,7 +58,7 @@ function crearMensaje(){
     parrafo.innerHTML= "El jugador "+ nombreJugador1 +" "+ jugador
 
     Mensajes.appendChild(parrafo)
-    
+   
     if(jugador === 1 ){
         let parrafo =document.createElement('p')
         parrafo.innerHTML= "EL ULTIMO JUGADOR ES "+ nombreJugador1 +" TOCA SIGUIENTE 🙃 PARA CONTINUAR"
@@ -68,7 +68,7 @@ function crearMensaje(){
         let siguiente = document.getElementById("siguiente")
         siguiente.addEventListener('click',cambiarJugadorDos)
 
-
+       
 
     }else{
         return;
@@ -89,14 +89,13 @@ function cambiarJugadorDos() {
 
     let Mensajes = document.getElementById("MENSAJES")
 
-    let parrafo =document.createElement('p')
+    let parrafo =document.getElementById("MENSAJES")
     parrafo.innerHTML= "El jugador "+ nombreJugador2 +" "+ jugador
 
-    Mensajes.appendChild(parrafo)
     
     if(jugador === 2 ){
         let parrafo =document.createElement('p')
-        parrafo.innerHTML= "EL ULTIMO JUGADOR ES "+ nombreJugador1 +" TOCA SIGUIENTE 🙃 PARA CONTINUAR"
+        parrafo.innerHTML= "EL ULTIMO JUGADOR ES "+ nombreJugador2 +" TOCA SIGUIENTE 🙃 PARA CONTINUAR"
 
         Mensajes.appendChild(parrafo)
 
@@ -118,14 +117,13 @@ function cambiarJugadorTres() {
 
     let Mensajes = document.getElementById("MENSAJES")
 
-    let parrafo =document.createElement('p')
+    let parrafo =document.getElementById("MENSAJES")
     parrafo.innerHTML= "El jugador "+ nombreJugador3 +" "+ jugador
 
-    Mensajes.appendChild(parrafo)
     
     if(jugador === 3 ){
         let parrafo =document.createElement('p')
-        parrafo.innerHTML= "EL ULTIMO JUGADOR ES "+ nombreJugador1 +" TOCA SIGUIENTE 🙃 PARA CONTINUAR"
+        parrafo.innerHTML= "EL ULTIMO JUGADOR ES "+ nombreJugador3 +" TOCA SIGUIENTE 🙃 PARA CONTINUAR"
 
         Mensajes.appendChild(parrafo)
 
