@@ -16,11 +16,3 @@ git branch -M main
 git push -u origin main
 
 
-
-fuente de texto 
-css
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
-    boby:{
-        font-family: 'Anton', sans-serif;
-        }
