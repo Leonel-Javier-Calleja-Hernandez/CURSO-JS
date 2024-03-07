@@ -37,9 +37,10 @@ if (true){
 }
 alert ("si es " + numero)*/
 
-//NOTAS-TEXTO
 
-var A = 1
+// NOTAS-TEXTO
+
+/*var A = 1
 var B = 2
 var C = A + B
 let resultado =[]
@@ -55,8 +56,10 @@ function cambiarATexto() {
     console.log(resultado)
     B = C + A
     console.log(B)
-}
-//var ejemplo
+}*/
+
+
+//var EJEMPLO
 
 /*var hola = "hola"
 combiarIngles()
@@ -73,10 +76,42 @@ alert(hola)*/
     let hola ="hello"
     alert(hola)
  }
- alert(hola)
+ alert(hola) 
 */
-//const ejemplo
+
+
+//const EJEMPLO
+
 /*const hola = "hola"
 hola = "hello"
 */
 // el anterior da error por que las const no se pueden cambiar el valor
+
+
+//  SABER EL TIPO DE VARIABLE CON 
+
+// EJEMPLO :
+/*    let a = "hol"
+    let b = 4
+    let c = a + b
+    console.log(typeof(c)) 
+*/    
+
+// INTERPOLACION EJEMPLO
+
+let nombre = "Leonel Javier Calleja Hernandez"
+let edad = 18
+let año = 2024
+let mostrarEmogi
+let Mensaje = `hola mi nombre es ${nombre} y tengo ${edad} , estoy en el año ${año} y este es mi emogi favorito = ${emogi(mostrarEmogi)}`
+alert(Mensaje)
+
+function emogi(a) {
+    let elEmogi = a ="😁"
+    return elEmogi
+}
+
+//string
+
+
+

@@ -154,6 +154,12 @@ function MensajeFinal() {
     let siguiente = document.getElementById("reiniciar")
     siguiente.addEventListener('click',reiniciar)
    
+    let MensajesPFin = document.getElementById("MENSAJEPersonajeFinal")
+
+    let parrafoFP =document.createElement('p')
+    parrafoFP.innerHTML= `El ultimo jugador fue ${nombreJugador3} con el numero ${jugador}`
+    
+    MensajesPFin.appendChild(parrafoFP)
     MensajesFin.appendChild(parrafo)
     console.log(MensajeFinal)
 
