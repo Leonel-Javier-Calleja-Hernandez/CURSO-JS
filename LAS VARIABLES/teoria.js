@@ -105,10 +105,22 @@ let año = 2024
 let mostrarEmogi
 let Mensaje = `hola mi nombre es ${nombre} y tengo ${edad} , estoy en el año ${año} y este es mi emogi favorito = ${emogi(mostrarEmogi)}`
 alert(Mensaje)
+MensajeHola()
 
 function emogi(a) {
     let elEmogi = a ="😁"
     return elEmogi
+    
+}
+
+function MensajeHola(){
+    let MensajeHolaId = document.getElementById('hola')
+
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = `hola ${nombre}`
+
+    MensajeHolaId.appendChild(parrafo)
+    console.log(parrafo);
 }
 
 //string

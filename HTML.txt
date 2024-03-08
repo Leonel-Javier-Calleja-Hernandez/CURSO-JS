@@ -1,0 +1,10 @@
+defer(aplazar:esperar) = le indica a el html que cuando carge completamente, carge el .js esta para que no de 
+errores como al crear un parrafo en el .js
+
+html: 
+<body>
+<script src="./nombreDeElDocumento.js"defer>
+
+    </script>
+</body>
+   

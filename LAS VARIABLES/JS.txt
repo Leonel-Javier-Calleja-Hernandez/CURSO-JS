@@ -1,0 +1,21 @@
+mandar un parrafo ('p') a html
+
+
+
+document.getElementById = es la udicacion de el parrafo en el html
+document.createElement('p') = es para crear un parrafo
+parrafo.innerHTML = `` = el texto que se va a insertar en el html
+MensajeHolaId.appendChild(parrafo) = nombreDelaUdicacionDelParrafo.añadir(el texto) 
+
+
+EJEMPLO:
+
+function MensajeHola(){
+    let MensajeHolaId = document.getElementById('hola')
+
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = `hola ${nombre}`
+
+    MensajeHolaId.appendChild(parrafo)
+    console.log(parrafo);
+}

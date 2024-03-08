@@ -12,7 +12,7 @@ function iniciarJuego(){
     let Mensajes = document.getElementById("MENSAJESInicio")
 
     let parrafo =document.createElement('p')
-    parrafo.innerHTML= "HOLA INICIAMOS 👇"
+    parrafo.innerHTML= `HOLA INICIAMOS JUGADOR ${jugador} <br>👇 `
 
     Mensajes.appendChild(parrafo)
 

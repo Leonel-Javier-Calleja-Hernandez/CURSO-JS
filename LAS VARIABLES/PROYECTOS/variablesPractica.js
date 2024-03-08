@@ -3,6 +3,21 @@ const nombreJugador2 = " javier "
 const nombreJugador3 = " calleja "
 
 var jugador = 1
+
+
+function mensajeFinal(){
+
+    
+    let MensajeId = document.getElementById("jugador")
+
+    let parrafo =document.createElement('p')
+    parrafo.innerHTML= `hola ${jugador}`
+
+    MensajeId.appendChild(parrafo)
+
+}
+
+
 alert("el jugador "+ nombreJugador1 +" "+ jugador)
 alert("Inicia el " + jugador)
 cambiarJugadorDos()
@@ -24,4 +39,7 @@ if (true){
 alert("Inicia el jugador " + jugador)
 if (true){
     alert("reiniciar pagina ☺")
+    mensajeFinal()
 }
+
+document.addEventListener('DOMContentLoaded',mensajeFinal)
