@@ -41,5 +41,3 @@ if (true){
     alert("reiniciar pagina ☺")
     mensajeFinal()
 }
-
-document.addEventListener('DOMContentLoaded',mensajeFinal)
