@@ -10,7 +10,7 @@ var resultado = leonelJavierCalleja * telefono
 alert(resultado)
 
 function miNombre() {
-    telefono = 3108006375
+    telefono = "numero de suscriptores YOSERLeo = "
     var nombre = "leonel javier callejas hernandez"
     var variableLocal = null
     DNI = "10l"
