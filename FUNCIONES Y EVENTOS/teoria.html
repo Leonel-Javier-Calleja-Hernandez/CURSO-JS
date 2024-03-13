@@ -8,7 +8,49 @@
 <body>
     <link rel="stylesheet" href="teoria.css">
     <script src="./teoria.js" defer></script>
-    <h1>FUNTIONES Y EVENTOS</h1>
+<h1>FUNTIONES Y EVENTOS</h1>
+<h1>FUNTION</h1>
+    <h2>lista de ordenes que se ejecutan en un orden indicado, tantas veces como la funtion haya sido llamada. si esta no se llama las funtion no se ejecuta. <br>estas pueden ser de utilidad cuando vemos que algo se repite muchas veses y asi crear una funtion agrupando la lineas de codigo y hacer una llamada a la funtion donde la nesecitemos para que se a mas corto y sencillo combrender</h2>
 
+    <h2>es como una carpeta que tiene un nombre y dentro  de esa carpeta tiene unas instrucciones que al llamar la funtion(carpeta) ase lo que esta dentro de ella y se ejecuta siempre y cuando se llama la funtion</h2>
+
+    <h2>para llamar a una funtion: <br>nombre_de_la_funtion()</h2>
+
+<h1>LLAMAR UNA FUNTION DENTRO DE UNA FUNTION</h1>
+    <h2>si estamos en una funtion y nesecitamos aceder a otra, se ya se llama la funtion y se ponen los () <br> y si hay lineas de codigo debajo de la llamada a la funtion este se regresa </h2>
+
+<h1>COMO EJECUTAR LA PRIMERA FUNTION</h1>
+
+    <h2>1.colocar la llamada de la funtion en la primera linea de el codigo</h2>
+
+        <img src="./imagenes/1FUNTION.jpeg" alt="1 funtion">
+
+    <h2>2.boton y evento : 1 linea => window.onload = inicio;<br>  al hacer click empezara todas la aciones</h2>
+
+        <img src="./imagenes/2FUNTION.jpeg" alt="2 funtion">
+   
+<h1>EVENTOS</h1>
+
+    <h2>un evento es una palabra que indica cuando se ejecuta una funtion es tas se escriben todo junto y sin ninguna mayuscula</h2>
+    <h2>se caracterisan por iniciar con "on" y luego  una palabra <br>Ej:onclick</h2>
+
+        <img src="./imagenes/1EVENTOS.jpeg" alt="1 eventos">
+
+    <h2>para ejecutar una funtion normalmente esto se hace atraves de las Eventos</h2>
+    <h2>onclick: cuando se haga click en el boton <br> onmouseenter: cuando el cursor pase por encima <br>ondblclick: cuando se haga doble click en <br>onload: cuando la pagina carge</h2>
+
+<h1>SINTAXIS</h1>
+    <h2></h2>
+
+<h1>ERRORES</h1>
+
+    <h2>Cuando la pagina aparece en el navegador comienza de forma secuecial osea linea a linea y si el stript esta en la parte de al inicio de de el head o el body al leer el nombre de el boton "boton_ir" el da error al no estar creado aun el button que se le indica</h2>
+        <img src="./imagenes/1.ERROR.jpeg" alt="1.error">
+<h1>SOLUCION</h1>
+    <h2>al meter la linea de error en una funtion .js no la leera ya que no sea llamado esta funtion y solo la leera al momento de llamarla <br>este es window.onload = inicio </h2>
+    <h2>window : la ventana osea el html en el navegador <br>onload : esperar <br>= inicio : ejecuta la funtion inicio</h2>
+        <img src="./imagenes/1.SOLUCION.jpeg" alt="1.solucion">
+    <h2>NOTA : en la funtion inicio es aconsejable tener todos los eventos</h2>
+        <img src="./imagenes/1.NOTA.jpeg" alt="1.nota">
 </body>
 </html>

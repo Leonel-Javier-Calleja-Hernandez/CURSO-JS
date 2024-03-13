@@ -16,3 +16,11 @@ git branch -M main
 git push -u origin main
 
 
+
+Ver los ultimos comits
+
+git log --oneline 
+
+cambiar nombre de ultimo commit
+
+git commit --amend -m "nuevo_nombre"
