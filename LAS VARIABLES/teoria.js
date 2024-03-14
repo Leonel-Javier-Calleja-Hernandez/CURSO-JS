@@ -122,6 +122,11 @@ function MensajeHola(){
     MensajeHolaId.appendChild(parrafo)
     console.log(parrafo);
 }
+document.getElementById("irOperadoresYExpresiones").onclick = irPaginaOperadorYExpresiones
+
+function irPaginaOperadorYExpresiones() {
+    location.href="file:///C:/Users/USER/Desktop/PROYECTOS%201/OPERADORES%20Y%20EXPRESIONES/teoria.html"
+}
 
 //string
 

@@ -141,3 +141,13 @@ let edad = 19
 let vivo = true
 let resultado = (!vivo)? "no puedes votar " : "puedes votar" 
 alert(resultado)
+
+function Iniciar() {
+    document.getElementById("irFuncionesYEventos").onclick = IrAOperadoresYExpresiones   
+}
+
+
+function IrAOperadoresYExpresiones() {
+    location.href="file:///C:/Users/USER/Desktop/PROYECTOS%201/FUNCIONES%20Y%20EVENTOS/teoria.html"
+}
+window.onload = Iniciar
