@@ -24,3 +24,7 @@ git log --oneline
 cambiar nombre de ultimo commit
 
 git commit --amend -m "nuevo_nombre"
+
+clonar repositorio
+video = https://youtu.be/XycExtQ31GE?si=DZX0-Wy3tA4S2O8n
+git clone https://github.com/Leonel-Javier-Calleja-Hernandez/PROYECTOS-1.git
