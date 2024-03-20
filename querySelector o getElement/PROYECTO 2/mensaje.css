@@ -2,6 +2,7 @@
 
 body{
         font-family: 'Anton', sans-serif;
+        background-color: tan;
         }
 
 h1{
@@ -29,7 +30,7 @@ button {
     margin: 40px;
     font-family: 'Anton', sans-serif;
 }
-#escribir{
+#escribir , #usuario{
     font-family: 'Anton', sans-serif;
 	padding:8px 15px;
 	border-radius:7px 0 0 7px;
@@ -37,5 +38,5 @@ button {
 	font-size:2em;
 	border:1px dotted #ec7c26;
 	color:#ec7c26;
-	width:67%;
+	width:35%;
 }
