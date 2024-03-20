@@ -48,9 +48,9 @@ function iniciar() {
 }
 function listoTodo(){
     document.getElementById("botonEvento1").onclick = iniciar
-    document.getElementById("botonIrPaginaVariablesTeoria").onclick = Ir_a_pagina_wed
+    document.getElementById("botonIr").onclick = Ir_a_pagina_wed
 }
 function Ir_a_pagina_wed() {
-    location.href = "file:///C:/Users/USER/Desktop/PROYECTOS%201/LAS%20VARIABLES/teoria.html"
+    location.href = "file:///C:/Users/leoca/OneDrive/Escritorio/PROYECTOS-1/querySelector%20o%20getElement/teoria.html"
 }
 window.onload = listoTodo

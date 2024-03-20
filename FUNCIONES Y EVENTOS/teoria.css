@@ -16,6 +16,12 @@ h2{
     display: flex;
     align-items: center;
 }
+h3{
+    text-shadow: 5px 5px black;
+    text-align-last: center;
+    color: rgb(0, 255, 213);
+    font-size: 30px;
+}
 button {
     background-color: #ff0000;
     width: 200px;

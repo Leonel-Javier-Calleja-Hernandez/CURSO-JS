@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelecto o getElement</title>
+    <script src="./teoria.js"></script>
+    <link rel="stylesheet" href="./teoria.css">
+</head>
+<body>
+    <div class="caja1">caja 1 querySelector</div>
+    <div class="caja1">caja 1 querySelector</div>
+    <div class="caja2">caja 2 getElement</div>
+    <div class="caja2">caja 2 getElement</div>
+
+    <h1>querySelector o getElement</h1>
+
+<img src="./imagenes/querySelector o getElement.jpg" alt="querySelector o getElement">
+
+<h1>1. querySelector</h1>
+
+    <h2>dentro de ("") se utiliza asi como en el css con los id y las class y se puede tambien poner un "." al final para o poner un style o un evento </h2>
+    <h2># = id</h2>
+    <h2>. = class</h2>
+        <h3>TIPO NOMBRE</h3>
+    <h2>document.querySelector("#NOMBRE")</h2>
+    <h2>document.querySelectorAll(".class2")</h2>
+        <h3>UBICACION NOMBRE</h3>
+    <h2>document.querySelectorAll("#NOMBRE")[veces que se repite si hay 0,1,...]</h2>
+    <h2>document,querySelectorAll(".class2")[0]</h2>
+        <h3>TIPO ELEMENTO HTML</h3>
+    <h2>document.querySelector("tipo de elementos html")</h2>
+    <h2>document.querySelector("div")[1]</h2>
+        <h3>UBICACION ELEMENTO</h3>
+    <h2>document.querySelectorAll("tipo de elementos html")[veces que se repite si hay 0,1,...]</h2>
+
+<h1>2. getElement</h1>
+
+        <h3>TIPO NOMBRE</h3>
+    <h2>document.getElementById("nombre Id")</h2>
+    <h2>document.getElemenyByClassName(caja2)[0]</h2>
+        <h3>UBICACION ELEMENTO</h3>
+    <h2>document.getElementsByIdTagName("tipo de elemento html")[veces que se repite si hay 0,1,,...]</h2>
+    <h2>document.getElementsByIdTagName("div")[0]</h2>
+
+<h1>ACCEDER A UN ELEMENTO POR SU RUTA</h1>
+<img src="./imagenes/accederPorRuta.jpg" alt="accederPorRuta">
+        <h3>querySelectorAll <br> </h3>
+    <h2>document.SelectorAll(".class3 .class4")[0]</h2>
+    <h2>similar a como lo hacemos en css y si hubieran mas se le agregarian con un espacios</h2>
+        <h3>getElement <br> </h3>
+    <h2>document.get</h2>
+
+
+<h1>ACTUALIZAR Elementos getElement y EL querySelector</h1>
+        <h3>querySelector</h3>
+    <h2>cuando al ponemos una variable y le asignamos a esta variable el valor de la ruta, y si aeste le pedimos cuanta cantidad de elemetos hay y si agregamos una nuevo elemento(+=) y le preguntamos cuanta cantidad de elementos hay este no se actualiza.<br>Eje:  ./teoria/2.ACTUALIZAR Elementos getElement y EL querySelector</h2>
+    <img src="./imagenes/querySelector.png" alt="querySelector">
+        <h3>getElement</h3>
+    <h2>con getElement si se actualiza los elementos tanto creados como eliminados <br>Eje:  ./teoria/2.ACTUALIZAR Elementos getElement y EL querySelector</h2>
+    <img src="./imagenes/getElement.png" alt="getElement">
+
+
+
+<h1>ir a  😀👇</h1>
+<button id="botonIr">pagina ..</button>
+    <h3>ESTOS SON LOS div CREADOS</h3>
+</body>
+</html>

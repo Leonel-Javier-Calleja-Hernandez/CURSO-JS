@@ -1,30 +1,27 @@
 …o crear un nuevo repositorio en la línea de comando
 
-echo "# PROYECTOS-JS" >> README.md
 git init
 git add .
-git commit -m "G/05/03/2024::-"
+git commit -m ""
 git branch -M main
 git remote add origin https://github.com/Leonel-Javier-Calleja-Hernandez/PROYECTOS-1.git
 git push -u origin main
 
 
-…o enviar un repositorio existente desde la línea de comando
-
-git remote add origin https://github.com/Leonel-Javier-Calleja-Hernandez/PROYECTOS-1.git
-git branch -M main
-git push -u origin main
-
-
-
-Ver los ultimos comits
+VER LOS ULTIMOS COMMITS
 
 git log --oneline 
 
-cambiar nombre de ultimo commit
+CAMBIAR EL NOMBRE DE EL ULTIMO COMMIT
 
 git commit --amend -m "nuevo_nombre"
 
 clonar repositorio
 video = https://youtu.be/XycExtQ31GE?si=DZX0-Wy3tA4S2O8n
 git clone https://github.com/Leonel-Javier-Calleja-Hernandez/PROYECTOS-1.git
+
+mandar a el repositorio
+
+git add .
+git commit -m ""
+git push

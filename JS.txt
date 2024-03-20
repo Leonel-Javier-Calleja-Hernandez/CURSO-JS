@@ -1,0 +1,8 @@
+BOTON PARA TEORIA E IR A PAGINA SIGUIENTE
+
+function listoTodo(){document.getElementById("botonIr").onclick = Ir_a_pagina_wed
+}
+function Ir_a_pagina_wed() {
+    location.href = ""
+}
+window.onload = listoTodo

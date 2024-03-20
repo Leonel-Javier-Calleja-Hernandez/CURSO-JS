@@ -15,17 +15,3 @@ h2{
     display: flex;
     align-items: center;
 }
-h3{
-    text-shadow: 5px 5px black;
-    text-align-last: center;
-    color: rgb(0, 255, 213);
-    font-size: 30px;
-}
-button {
-    background-color: #FF5722;
-    width: 200px;
-    height: 80px;
-    border-radius: 20px;
-    margin: 40px;
-    font-family: 'Anton', sans-serif;
-}

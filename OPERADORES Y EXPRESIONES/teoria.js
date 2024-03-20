@@ -148,6 +148,6 @@ function Iniciar() {
 
 
 function IrAOperadoresYExpresiones() {
-    location.href="file:///C:/Users/USER/Desktop/PROYECTOS%201/FUNCIONES%20Y%20EVENTOS/teoria.html"
+    location.href="file:///C:/Users/leoca/OneDrive/Escritorio/PROYECTOS-1/FUNCIONES%20Y%20EVENTOS/teoria.html"
 }
 window.onload = Iniciar

@@ -125,7 +125,7 @@ function MensajeHola(){
 document.getElementById("irOperadoresYExpresiones").onclick = irPaginaOperadorYExpresiones
 
 function irPaginaOperadorYExpresiones() {
-    location.href="file:///C:/Users/USER/Desktop/PROYECTOS%201/OPERADORES%20Y%20EXPRESIONES/teoria.html"
+    location.href="file:///C:/Users/leoca/OneDrive/Escritorio/PROYECTOS-1/OPERADORES%20Y%20EXPRESIONES/teoria.html"
 }
 
 //string
