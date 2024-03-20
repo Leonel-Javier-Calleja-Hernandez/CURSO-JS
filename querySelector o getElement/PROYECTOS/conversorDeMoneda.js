@@ -6,7 +6,7 @@ function convertir(a, b) {
     return resultado
 }
 
-function iniciar_convercion() {
+function iniciar_conversion() {
     cambio = document.querySelector("#cambio").value
     dinero = document.querySelector("#dinero").value;
     dinero =(dinero>0)? dinero:1
@@ -19,7 +19,15 @@ function iniciar_convercion() {
 window.onload = inicio;
 
 function inicio() {
-
-    document.querySelector("#convertir").onclick = iniciar_convercion
+    document.querySelector("#dinero").onkeydown = teclado
+    document.querySelector("#convertir").onclick = iniciar_conversion
     document.querySelector("#cambio").value = cambio
+}
+//para saber que techa se a seleccionado,  se debe de crear un parametro ejemplo"e"
+function teclado(e) {
+    let codigo_tecla= e.keyCode
+    // alert (codigo_tecla)
+    if (codigo_tecla == 13){
+        iniciar_conversion()
+    }
 }
