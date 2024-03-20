@@ -14,6 +14,8 @@ function iniciar_conversion() {
    recibo=convertir(dinero,cambio)
     console.log(recibo + "col este es el resulado de cambiar peso colombiano a euro")
     document.querySelector("#conversines").innerHTML += `${dinero} euros son ${recibo} pesos colombianos <br>`
+    document.querySelector("#dinero").value="";
+    document.querySelector("#dinero").focus();
 }
 
 window.onload = inicio;
