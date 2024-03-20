@@ -9,6 +9,7 @@ function convertir(a, b) {
 function iniciar_convercion() {
     cambio = document.querySelector("#cambio").value
     dinero = document.querySelector("#dinero").value;
+    dinero =(dinero>0)? dinero:1
     //dinero = document.querySelector("dinero").value; = agarra el valor escrito en el input y lo agrega a la variable dinero
    recibo=convertir(dinero,cambio)
     console.log(recibo + "col este es el resulado de cambiar peso colombiano a euro")
