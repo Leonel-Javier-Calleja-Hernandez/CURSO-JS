@@ -1,9 +1,12 @@
-function listoTodo(){document.getElementById("botonIr").onclick = Ir_a_pagina_wed
+function listoTodo(){
+    document.getElementById("decimalJs").onclick = irPaginaDecimaleJS
 cuantosElementosquerySelector()
 cuantosElementosgetElement()
 }
-function Ir_a_pagina_wed() {
-    location.href = ""
+
+
+function irPaginaDecimaleJS() {
+    location.href="file:///C:/Users/leoca/OneDrive/Escritorio/PROYECTOS-1/DECIMALES%20EN%20JS/teoria.html"
 }
 window.onload = listoTodo
 

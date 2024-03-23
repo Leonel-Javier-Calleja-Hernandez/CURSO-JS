@@ -127,6 +127,11 @@ document.getElementById("irOperadoresYExpresiones").onclick = irPaginaOperadorYE
 function irPaginaOperadorYExpresiones() {
     location.href="file:///C:/Users/leoca/OneDrive/Escritorio/PROYECTOS-1/OPERADORES%20Y%20EXPRESIONES/teoria.html"
 }
+document.getElementById("decimalJs").onclick = irPaginaDecimaleJS
+
+function irPaginaDecimaleJS() {
+    location.href="file:///C:/Users/leoca/OneDrive/Escritorio/PROYECTOS-1/SOLUCIONES%20A%20PROBLEMAS%20DE%20JS/DECIMALES%20EN%20JS/teoria.html"
+}
 
 //string
 

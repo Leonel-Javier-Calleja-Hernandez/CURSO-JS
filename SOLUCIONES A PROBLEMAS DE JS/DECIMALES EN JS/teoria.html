@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DECIMALES EN JS</title>
+    <link rel="stylesheet" href="teoria.css">
+    <script src="teoria.js"></script>
+</head>
+<body>
+    <h1>EL ERROR CON LOS DECIMALES EN JS</h1>
+        <h2>Al realizar operaciones aritméticas (sumas, restas, multiplicaciones) con números decimales <br>javaScript el resultado es un PROBLEMA, ya que realiza los cálculos incorrectamente añadiendo <br>multitud de decimales innecesarios y causando un problema de difícil solución.</h2>
+        <h2>1</h2>
+    <img src="./imagenes/decimale1errores.png" alt="decimale1errores">
+    <h1>SOLUCION</h1>
+    <h2>toFixed(numero) = quita decimale que se le pida quitar en el (numero)</h2>
+    <h2>Number = Combierte a numericos</h2>
+            <h3>1.toFixed(numeros de decimales)</h3>
+        <h2>con este se pueden agregar la cantidad de decimales que uno quiere que quede el resultado</h2>
+        <h2>2</h2>
+    <img src="./imagenes/S1.png" alt="">
+            <h3>ERRORE</h3>
+        <h2>cuando se quiere calcular un  numero y este es entero siempre salbra agregandole los 0 decimales y no permite quitar los decimales</h2>
+    
+            <h3>2.formula matematica</h3>
+    <h2>si tengo un decimal y luego lo multiplico por 1000 u otro numero y luego lo divido por ese numero me de un numero entero</h2>
+    <h2>3</h2>
+    <img src="./imagenes/S2.png" alt="">
+    <h2>osea eliminar los decimales multiplicandolos decimale y luego dividirlos el resultado por el mismo numero</h2>
+    <h2>4</h2>
+    <img src="./imagenes/S3.png" alt="">
+    <h3>3.Number(().toFixed())</h3>
+    <h2>la solución más efectiva, fácil, rápida e indolora al problema que se produce cuando javaScript <br>realiza cualquier operación aritmética con decimales, donde una simple suma como:
+        0.2 + 0.1<br>
+        tiene como resultado:<br>
+        0.30000000000000004, y no 0.3 (como sería lo lógico)</h2>
+        <h2>5</h2>
+    <img src="./imagenes/SDefinitiva-Number(().toFixed()).png" alt="SDefinitiva-Number(().toFixed())">
+    <h2>lo que se hae es poner de manera conjunta Number(().toFixed()) par aque asi solucione el error <br>poniendo los decimales que se brnesecitan y eliminar los innecesarios</h2>
+    <h3>COMO HACER LO??</h3>
+    <h2>primero realizando la operacion y luego  agregarle el .toFixed y depues enserrar todo con un Number</h2>
+    <h2>EJ: img 5 linea 17</h2>
+</body>
+</html>
