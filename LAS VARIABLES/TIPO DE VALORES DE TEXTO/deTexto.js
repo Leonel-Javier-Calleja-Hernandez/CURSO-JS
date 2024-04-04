@@ -1,0 +1,5 @@
+alert("hola como estan gente \n 😊\n estoy utilizando el \\n para bajar al siguiente parrafo")
+alert("solo estoy \n probando esto \n no estan complicado \n pero es algo nuevo e interesante para saber\"entonse\"")
+alert("por el momento\n lo estoy probando\n para saber en como lo puedo utilizar\n... ")
+alert("solo querio saber \t para que sirve esto? y hace somo una --> en \\t")
+alert("los demas \" o \' se escriben \\ + \" y \\ + \'")
