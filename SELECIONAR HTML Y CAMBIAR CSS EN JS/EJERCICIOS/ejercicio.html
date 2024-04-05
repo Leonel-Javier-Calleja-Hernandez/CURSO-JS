@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     
+      function iniciar() {
+        document.querySelector("#boton1").onclick = cambiarColorB;
+      }
+      function cambiarColorB() {
+        let boton1 = document.querySelector("#boton1").style
+        boton1.color="red"
+        boton1.backgroundColor = "orange" 
+        boton1.width = "250px"
+        boton1.textShadow="2px 2px black"
+        boton1.fontSize= "50px"
+      }
+      window.onload = iniciar
+    </script>
+</head>
+<body>
+    <button id="boton1">BOTON 1</button>
+    
+</body>
+</html>
