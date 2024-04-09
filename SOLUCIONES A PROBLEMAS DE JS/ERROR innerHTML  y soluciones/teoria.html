@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ¿Por qué NO se debe usar innerHTML con JAVASCRIPT? </title>
+    <link rel="stylesheet" href="teoria.css">
+    <script src="./teoria.js"></script>
+</head>
+<body>
+<h1> ¿Por qué NO se debe usar innerHTML con JAVASCRIPT? </h1>
+    <h2>si utilizamos el innertHTML para añadir o hacer un contenido dinamico dentro de un caja o div este da error a los eventos deje de funcionar o puede que solo funcione uno de todos los botones,</h2>
+    <img src="imagenes/Captura de pantalla 2024-04-09 103940.png" alt="error de el innerHTML">
+    <h2>cuando tenemos un div y dentro de este hay algun boton o elemento que se le puede dar click para hacer alguna funtion etc.. al unicio puede funcionar pero despues falla ,al utilizar el innerHTML Los elementos  clicables de dicha "#caja" dejan de funcionar.</h2>
+
+<h1>¿POR QUE OCURRE ESTE ERROR?</h1>
+    <h2>por que al utilizar el operador de innertHTML+= el agrega el valor que nosotro le pongamos pero no soluciona los problemas que proboca </h2>
+<h1>¿CUANDO UTILIZAR EL innertHTML?</h1>
+    <h2>Solo utilizarlo para eliminar el contenido que hay en una caja y cambiarlo por otro nuevo contenido pero nunca para insertar nuevo contenido elementos html y menos si que tenga eventos o funtion  </h2>
+<h1>Utilizar el insertAdjacentHTML</h1>
+    <h2>este funciona para cuando queremos insertar elementos que contengan eventos como onclikck y funciones </h2>
+    <h2>entre los parentesis se pone la ubicacion de donde lo queremos poner y el contenido a enviar </h2>
+<img src="" alt="">
+<h1>Soluciones</h1>
+<h1>insertAdjacentHTML</h1>
+    <h2>cambiar el innertHTML por utilizar el insertAdjacentHTML(1 , 2)</h2>
+    <h2>Ejemplo: insertAdjacentHTML("beforeend",`elemento`);</h2>
+    <img src="imagenes/Captura de pantalla 2024-04-09 140149.png" alt="">
+    <h2>el insertAdjacentHTML corrige lo que el innerHTML no hace.</h2>
+
+<h1>1. donde lo queremos añadir</h1>
+
+        <h3>arriba de caja = beforebegin</h3>
+    <h2>queda antes fuera de la caja y arriba</h2>
+        <h3>abajo de caja = afterend</h3>
+    <h2>queda fuera de caja y abajo</h2>
+        <h3>antes del primer hijo de caja = afterbegin</h3>
+    <h2>dentro de la caja y de primeras antes de el hijo</h2>
+        <h3>despues de el ultimo hijo = beforeend</h3>
+    <h2>dentro de la caja y despues de el ultimo hijo </h2>
+
+<h1>2.el elemento a incresar en el sea div,buttun,h1,etc..</h1>
+<img src="imagenes/Captura de pantalla 2024-04-09 123813.png" alt="">
+<h1>appenchil</h1>
+</body>
+</html>

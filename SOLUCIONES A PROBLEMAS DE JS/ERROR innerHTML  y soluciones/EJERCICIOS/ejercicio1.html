@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 1</title>
+    <script>
+function iniciar() {
+    document.querySelector("#boton").onclick= crearDivM
+}
+function crearDivM() {
+    let nuevoDiv = document.querySelector("#escribir").value
+    document.querySelector("#caja").innerHTML+=`<div>${nuevoDiv}</div>`
+}
+     window.onload= iniciar   
+    </script>
+</head>
+<body>
+    <div id="caja">
+         <button id="boton" onclick="crearDivM()">tocar</button>
+         <input id="escribir" autofocus>
+         
+    </div>
+    
+</body>
+</html>

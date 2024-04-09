@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>el error de innertHTML+=</title>
+   
+</head>
+<body>
+    <div class="caja"></div>
+    <script>
+        //Es un ejemplo de el error de innertHTML ya que solo uno funciona y son dos botones 
+        const CAJA= document.querySelector(".caja")
+        CAJA.innerHTML+=`<button>Aceptar</utton>`
+            document.querySelector("button").addEventListener("click",saludar)
+        CAJA.innerHTML+=`<button>Cancelar</utton>`
+            document.querySelectorAll("button")[1].addEventListener("click",saludar)
+    
+        function saludar() {
+            alert("hola que tal :3")
+        }
+    </script>
+</body>
+</html>

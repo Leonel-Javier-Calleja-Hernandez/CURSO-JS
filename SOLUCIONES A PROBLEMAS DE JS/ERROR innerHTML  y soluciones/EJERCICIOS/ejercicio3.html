@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercio 3</title>
+    <script>
+        function inicio() {
+            document.getElementById("B1").onclick=MandarMensaje
+        }
+
+        function MandarMensaje() {
+            let M=document.querySelector("#I1").value
+            document.querySelector("#C1").innerHTML+=`<div>${M}</div>`
+        }
+    window.onload=inicio
+    </script>
+</head>
+<body>
+    <div id="C1">
+        <button id="B1"onclick="MandarMensaje()">mandar</button>
+        <input id="I1">
+    </div>
+    
+</body>
+</html>

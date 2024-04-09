@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 2</title>
+    <script>
+function inicio() {
+    document.querySelector("#boton1").onclick=mandarDiv
+}
+function mandarDiv() {
+    let mensaje = document.querySelector("#input").value
+ document.querySelector("#caja1").innerHTML+=`<div>${mensaje}</div>`
+}
+
+window.onload= inicio
+    </script>
+</head>
+<body>
+    <div id="caja1">
+        <button id="boton1"onclick="mandarDiv()">MANDAR</button>
+        <input id="input" autofocus>
+    </div>
+</body>
+</html>

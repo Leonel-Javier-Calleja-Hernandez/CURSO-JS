@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 4</title>
+    <script>
+        function iniciar() {
+            document.getElementById("boton1").onclick=MensajeH1
+        }
+        function MensajeH1(){
+            let MENSAJE = document.querySelector("#input1").value
+            document.querySelector("#caja1").innerHTML+=`<h1>${MENSAJE}</h1>`
+        }
+        window.onload=iniciar
+    </script>
+</head>
+<body>
+    <div id="caja1">
+        <button id="boton1"onclick="MensajeH1()">MANDAR</button>
+        <input id="input1">
+    </div>
+    
+</body>
+</html>
