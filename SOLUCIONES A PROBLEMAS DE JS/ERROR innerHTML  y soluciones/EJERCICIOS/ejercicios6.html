@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+<body>
+<div id="Div1">
+<button id="button1">boton 1</button>
+<button id="button2">boton 2</button>
+</div>
+
+    <script>
+const CAJA1=document.querySelector("#Div1")
+
+function inicio() {
+    document.getElementById("button1").onclick=crearBoton1
+    document.getElementById("button2").onclick=crearBoton2
+}
+function crearBoton1() {
+  
+    const BOTON1 = document.createElement("button")
+    BOTON1.style.backgroundColor="blue"
+    BOTON1.textContent="boton 1 N"
+  CAJA1.appendChild(BOTON1)
+    
+}
+function crearBoton2() {
+  
+  const BOTON2 = document.createElement("button")
+  BOTON2.style.backgroundColor="red"
+  BOTON2.textContent="boton 2 N"
+CAJA1.appendChild(BOTON2)
+  
+}
+        window.onload = inicio
+    </script>
+
+</body>
+</html>

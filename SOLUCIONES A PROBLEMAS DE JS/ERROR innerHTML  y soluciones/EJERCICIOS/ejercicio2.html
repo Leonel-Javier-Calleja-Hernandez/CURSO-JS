@@ -9,8 +9,12 @@ function inicio() {
     document.querySelector("#boton1").onclick=mandarDiv
 }
 function mandarDiv() {
-    let mensaje = document.querySelector("#input").value
- document.querySelector("#caja1").innerHTML+=`<div>${mensaje}</div>`
+let mensaje= document.querySelector("#input").value
+const MENSAJE = document.createElement("div")
+const CAJA = document.querySelector("#caja1")
+MENSAJE.textContent=`-->  ${mensaje}`
+CAJA.appendChild(MENSAJE)
+
 }
 
 window.onload= inicio
@@ -18,7 +22,7 @@ window.onload= inicio
 </head>
 <body>
     <div id="caja1">
-        <button id="boton1"onclick="mandarDiv()">MANDAR</button>
+        <button id="boton1">MANDAR</button>
         <input id="input" autofocus>
     </div>
 </body>

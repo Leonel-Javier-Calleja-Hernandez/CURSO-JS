@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ejercio 3</title>
     <script>
-        function inicio() {
-            document.getElementById("B1").onclick=MandarMensaje
-        }
+    function inicio(){
+        document.querySelector("#B1").onclick=mostarMensaje
 
-        function MandarMensaje() {
-            let M=document.querySelector("#I1").value
-            document.querySelector("#C1").innerHTML+=`<div>${M}</div>`
-        }
+    }
+    function mostarMensaje(){
+        let mensaje = document.querySelector("#I1").value
+        document.querySelector("#C1").insertAdjacentHTML("beforeend",`<div>${mensaje}</div>`)
+    }
     window.onload=inicio
     </script>
 </head>
 <body>
     <div id="C1">
-        <button id="B1"onclick="MandarMensaje()">mandar</button>
+        <button id="B1">mandar</button>
         <input id="I1">
     </div>
     

@@ -6,18 +6,20 @@
     <title>ejercicio 4</title>
     <script>
         function iniciar() {
-            document.getElementById("boton1").onclick=MensajeH1
+            document.querySelector("#boton1").onclick= mandarMensaje    
         }
-        function MensajeH1(){
-            let MENSAJE = document.querySelector("#input1").value
-            document.querySelector("#caja1").innerHTML+=`<h1>${MENSAJE}</h1>`
+        function mandarMensaje() {
+            let mensaje = document.querySelector("#input1").value
+
+            let CAJA1 =document.querySelector("#caja1")
+            CAJA1.insertAdjacentHTML("beforeend",`<div>${mensaje}</div>`)
         }
         window.onload=iniciar
     </script>
 </head>
 <body>
     <div id="caja1">
-        <button id="boton1"onclick="MensajeH1()">MANDAR</button>
+        <button id="boton1">MANDAR</button>
         <input id="input1">
     </div>
     

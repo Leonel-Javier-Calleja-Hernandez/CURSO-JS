@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>apendchild</title>
+
 </head>
 <body>
+<div class="caja"></div>
+    
+    <h1>apendchild</h1>
+<h2>es crear parte por parte en el js para que pueda dar solucion</h2>
    <h2>1.crear la etiqueta html</h2>
    <h2>2.contenido de la etiqueta</h2>
    <h2>3.se le quiere agregar un class se la agregria".nombreEtiqueta.classList.add"</h2> 
    <h2>4.lo que se quiere añadir dentro de la caja con el appendChild()</h2>
    <h2>5. el evento a llamar cuando Biene .addEventListener</h2>
-
+   <script>
+    const CAJA = document.querySelector(".caja");
+    
+    for (let k = 0; k < 10; k++) {
+    const BOTON=document.createElement("button")
+    BOTON.textContent=`Boton ${k+1}`
+    BOTON.classList.add("bt"+k)
+    CAJA.appendChild(BOTON)
+    BOTON.addEventListener("click",Saludar)
+    }
+    function Saludar() {
+        alert(`hola boton`)
+        
+    }
+    
+    </script>
 </body>
 </html>

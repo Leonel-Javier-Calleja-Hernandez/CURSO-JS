@@ -10,14 +10,15 @@ function iniciar() {
 }
 function crearDivM() {
     let nuevoDiv = document.querySelector("#escribir").value
-    document.querySelector("#caja").innerHTML+=`<div>${nuevoDiv}</div>`
+    document.querySelector("div").style.color="red"
+    document.querySelector("#caja").insertAdjacentHTML("beforeend",`<div>${nuevoDiv}</div>`)
 }
      window.onload= iniciar   
     </script>
 </head>
 <body>
     <div id="caja">
-         <button id="boton" onclick="crearDivM()">tocar</button>
+         <button id="boton">tocar</button>
          <input id="escribir" autofocus>
          
     </div>
