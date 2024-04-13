@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+        font-family: 'Anton', sans-serif;
+        }
+
+        #caja{
+        background-color: aqua;
+        width:200px;
+        padding: 10px;
+        border: 10px solid red;
+        
+        }
+
+        .cuadro{
+            border: 1px solid red;
+            width: 30px;
+            height: 30px;
+            color: brown;
+            text-align: center;
+            margin: 5px;
+        }
+        #numeroPremiado{
+            color: brown;
+            margin-bottom: 3px;
+        }
+
+</style>
+<script type="text/javascript">
+
+function iniciar() {
+    for (let k = 1; k <= 49; k++) {
+    document.querySelector("#caja").innerHTML+=`<button class="cuadro">${k}</button>`
+    }
+    for (let k = 0; k <=49; k++) {
+  document.querySelectorAll(".cuadro")[k].onclick = Colorear
+        
+    }
+}
+function Colorear() {
+    if(this.style.color!="white"){
+        this.style.color="white"
+        this.style.backgroundColor="blue"
+        let numero=this.innerHTML;
+        document.querySelector("#caja").insertAdjacentHTML("afterend",`<div class="cuadro">${numero}</div>`)
+    }else{
+        this.style=null;
+    }
+
+}
+
+
+
+window.onload=iniciar
+
+</script>
+</head>
+<body>
+    <div id="caja"></div>
+</body>
+</html>
