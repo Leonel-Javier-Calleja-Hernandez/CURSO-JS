@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHILDREN o GETATTRIBUTE</title>
+ <link rel="stylesheet" href="../../../STYLE Teoria/style.css">
+</head>
+<body>
+    <h1>CHILDREN o GETATTRIBUTE</h1>
+    <h2>el "this" es el un click de los elementos que se le a dado click pero no se sabe cual de todos es</h2>
+<h1>.children</h1>
+<h3>this.parentNote.children</h3>
+<h2>el parentNote es el elemento pabre y el children es el elemento hijo</h2>
+<h2>lo anterior nos puede servir en situaciones en las cales nesecitemos saber la cuntidad de elementos y los convierte en un array con todos los elementos que contenga el pabre  </h2>
+<h3>this.children</h3>
+<h2>son los hijo de elementos que contenga el elemento dado click </h2>
+<h2>el problema de utilizar el anterior es que si hacemos un cambio minico como poner un h1 en el html se puede dañar el codigo por su orden etc... por eso esta el GETATTRIBUTE </h2>
+<h1>.getAtribute</h1>
+<h2>es para seleccionar un atributo creado por nosotros como por ejemplo "jab"</h2>
+<h3>this.getAtribute("nombre_atributo_creado")</h3>
+<h2>este los selecciona y  esta en formato text por ende se le agrega el Number(this.getAtribute)</h2>
+<img src="../imagenes/Captura de pantalla 2024-04-13 212243.png" alt="Number(this.getAtribute)">
+
+</body>
+</html>
