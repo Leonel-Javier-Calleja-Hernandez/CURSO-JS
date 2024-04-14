@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio de condicionales</title>
+    <style type="text/css">
+img{
+    max-width: 100%;
+
+}
+#caja2{
+    display: none;
+    width: 250px;
+}
+
+    </style>
+
+<script>
+function inicio() {
+    document.getElementById("boton1").onclick = evaluar
+}
+// .toLowerCase() = este metodo combierte cualquier text en minuscula. 
+function evaluar() {
+    let nombre= document.getElementById("nombre").value.toLowerCase()
+//Number() = el text lo combierte en Number  
+    let edad = Number(document.getElementById("edad").value)
+if(nombre=="ataulfo"||nombre=="ataúlfo"){
+location.href="https://es.wikipedia.org/wiki/Ervigio"
+}else if(nombre =="ervigio" && edad ==680){
+document.getElementById("caja1").style.display = "none"
+document.getElementById("caja2").style.display = "block"
+
+}else{
+    alert("no se quien eres??")
+}
+}
+
+window.onload=inicio
+
+</script>
+</head>
+<body>
+<div id="caja1">
+<input id="nombre" autofocus>
+<input id="edad" type="number">
+<button id="boton1">Aceptar</button>
+</div>
+<div id="caja2">
+<img src="../img/Captura de pantalla 2024-04-13 221354.png" alt="">
+<button id="menos">-</button>
+<div id="cantidad"></div>
+<button id="mas">+</button>
+</div>
+    
+</body>
+</html>
