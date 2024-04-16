@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>practicando el THIS</title>
+    <style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+        font-family: 'Anton', sans-serif;
+        }
+#caja{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    border: 1px solid rgb(255, 153, 0);
+}
+button{
+    
+    font-family: 'Anton', sans-serif;
+    border: 10px solid rebeccapurple;
+    width: 100px;
+    height: 40px;
+    margin: 20px;
+   
+
+}
+    </style>
+    <script>
+        function iniciar() {
+            for (let k = 0; k < 25; k++) {
+                document.querySelector("#caja1").insertAdjacentHTML("beforeend",`<button class="boton">boton ${1+k}</button>`)
+                
+            document.querySelectorAll(".boton")[k].onclick = Ejecutar
+                
+            }
+            
+        }
+
+        function Ejecutar() {
+
+        if (this.style.color!="blue") {
+            this.style.color="blue"
+            this.style.backgroundColor= "rebeccapurple"
+        }else{
+            this.style.color=null
+            this.style.backgroundColor
+        }
+        }
+        window.onload=iniciar
+    </script>
 </head>
 <body>
-    
+    <div id="caja1">
+
+    </div>
+    bu
 </body>
 </html>
