@@ -16,6 +16,7 @@ var total=5;
 		document.getElementsByClassName("circulos")[2].style.backgroundColor="crimson";
 		document.getElementsByClassName("circulos")[0].onclick = acceder_parte1;
 		document.getElementsByClassName("circulos")[1].onclick = acceder_parte2;
+		
 	}
 
 	function acceder_parte1(){
@@ -37,19 +38,36 @@ var total=5;
 		if (codigo_tecla==39){
 			imagen_siguiente();
 		}
+		if(codigo_tecla==32){
+			location.href="act0_jab.html"
+		}
 	}
 
 	function imagen_anterior(){
 		// Al llegar a la primera imagen el botón de imagen anterior se oculta (visibility:hidden), posteriormente cuando se avance a otra imagen siguiente vuelve a mostrarse (visility:visible)
-		// Decrementa en 1 la variable imagen y actualiza todos los cambios		
-		imagen--;
+		// Decrementa en 1 la variable imagen y actualiza todos los cambios	
+		if (imagen<=1) {
+			document.querySelector("#anterior").style.display="none"
+			document.querySelectorAll(".flecha")[0].style.border="white"
+			}else{
+			imagen--;
+			document.querySelector("#siguiente").style.display="block"
+		
+		}
 		actualizar();
 	}
 	
 	function imagen_siguiente(){
 		// Al llegar a la última imagen el botón de imagen siguiente se oculta (visibility:hidden), posteriormente cuando se retroceda a otra imagen anterior vuelve a mostrarse (visility:visible)
 		// Incrementa en 1 la variable imagen y actualiza todos los cambios
-		imagen++;
+		if (imagen>=5){
+			document.querySelector("#siguiente").style.display="none"
+			document.getElementsByClassName("flecha")[1].style.border="white"
+		}else {
+			imagen++;
+			document.querySelector("#anterior").style.display="block"
+		
+		}
 		actualizar();
 	}
 
