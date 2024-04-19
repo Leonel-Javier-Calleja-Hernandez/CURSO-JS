@@ -36,6 +36,9 @@ var total=4;
 		if (codigo_tecla==39){
 			imagen_siguiente();
 		}
+		if (codigo_tecla==32){
+			location.href="act0_jab.html"
+		}
 	}
 
 	function imagen_anterior(){
