@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ejercicio de condicionales</title>
     <style type="text/css">
+   @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+        font-family: 'Anton', sans-serif;
+        width: 1000px;
+        border-radius: 10px;
+        background-color: chocolate;
+        }
+
 img{
     max-width: 100%;
 
@@ -13,33 +22,74 @@ img{
     display: none;
     width: 250px;
 }
+input{
+    font-family: 'Anton', sans-serif;
+    background-color: darkturquoise;
+    border-radius: 10px;
+
+}
+button{
+    border-radius: 10px;
+    background-color: grey;
+    font-family: 'Anton', sans-serif;
+}
+
 
     </style>
 
 <script>
+var intento = 0
 function inicio() {
     document.getElementById("boton1").onclick = evaluar
+    document.querySelector("#nombre").onkeydown = teclado
+    document.querySelector("#edad").onkeydown = teclado
+    
 }
+
 // .toLowerCase() = este metodo combierte cualquier text en minuscula. 
 function evaluar() {
-    let nombre= document.getElementById("nombre").value.toLowerCase()
+    
+let nombre= document.getElementById("nombre").value.toLowerCase()
 //Number() = el text lo combierte en Number  
-    let edad = Number(document.getElementById("edad").value)
-if(nombre=="ataulfo"||nombre=="ataúlfo"){
-location.href="https://es.wikipedia.org/wiki/Ervigio"
-}else if(nombre =="ervigio" && edad ==680){
-document.getElementById("caja1").style.display = "none"
-document.getElementById("caja2").style.display = "block"
+let edad = Number(document.getElementById("edad").value)
 
-}else{
-    alert("no se quien eres??")
+    if(nombre=="ataulfo"||nombre=="ataúlfo"){
+    location.href="https://es.wikipedia.org/wiki/Ervigio"
+    }else if(nombre =="ervigio" && edad ==680){
+    document.getElementById("caja1").style.display = "none"
+    document.getElementById("caja2").style.display = "block"
+    }else{
+        document.querySelector("#caja1").insertAdjacentHTML("beforeend",`<div>LO SIENTO, NO SE QUIEN ERES? 🤔</div>`)
+        if (edad!=688) {
+            document.querySelector("#edad").value=""
+            document.querySelector("#edad").focus();
+        }
+        if (nombre!="ervigio") {
+            document.querySelector("#nombre").value=""
+            document.querySelector("#nombre").focus()
+        }
+        intento++;
+console.log(intento)
+    if (intento>=4) {
+        location.href="https://es.wikipedia.org/wiki/Ervigio"
+    }
+    }
+
 }
+
+function teclado (e) {
+    codigo_t=e.keyCode
+    if (codigo_t==13) {
+        evaluar()
+    }
+    
 }
 
 window.onload=inicio
 
 </script>
 </head>
+
 <body>
 <div id="caja1">
 <input id="nombre" autofocus>
@@ -54,4 +104,5 @@ window.onload=inicio
 </div>
     
 </body>
+
 </html>
