@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+        font-family: 'Anton', sans-serif;
+        }
+        
+#caja{
+    background-color: browns;
+    border: 10px solid rgb(255, 0, 0);
+    width: 1060px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.informacion{
+    border: 5px solid blue;
+    margin: 10px;
+    width: 400px;
+}
+.nombre{
+    background-color: blue;
+color:red;
+}
+.edad{
+background-color: gold;
+} 
+.colorFavorito{
+
+    background-color: gold;
+}

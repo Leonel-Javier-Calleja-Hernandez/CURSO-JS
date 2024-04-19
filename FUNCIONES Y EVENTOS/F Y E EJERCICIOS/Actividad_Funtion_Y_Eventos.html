@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad_Funtion_Y_Eventos</title>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+        font-family: 'Anton', sans-serif;
+        border: 5px solid chocolate;
+        width: 1000px;
+        border-radius: 10px;
+        }
+
+#cajaIYB{
+    background-color: chocolate;
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+}
+#inputCambio{
+    background-color: chocolate;
+    border: 4px solid chocolate;
+    color: aliceblue;
+    font-family: 'Anton', sans-serif;
+    border-radius: 10px;
+}
+button{
+    font-family: 'Anton', sans-serif;
+   margin: 5px;
+    width: 100px;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+#caja1Texto{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+</style>
+    <script>
+const IVA = 0.21
+let SumarIVAS=[]      
+        
+function funtion_eventos() {
+    document.querySelector("#boton1").onclick = Calcular
+    document.querySelector("#inputCambio").focus();
+    
+}
+function Calcular() {
+
+    let numero = Number(document.querySelector("#inputCambio").value)
+    Total = numero+IVA
+    multiplicarIVA=numero*IVA
+    document.querySelector("#caja2Operacion").innerHTML+=`<div>${numero} + ${numero*IVA} = ${Total}</div>`
+    document.querySelector("#caja1Texto").innerHTML=`<div>el IVA de ${numero} es de ${multiplicarIVA}</div>`
+    
+   sumarTodosIVAS()
+}
+
+function sumarTodosIVAS() {
+    SumarIVAS.push(Total)
+    let total = ""
+  console.log(SumarIVAS)
+//sumar los valores de un array con el  reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+
+  let TodosIVAS= SumarIVAS.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+  document.querySelector("#caja3TotalSuma").innerHTML=`<div>TOTAL = ${Number((TodosIVAS).toFixed(3))}</div>`
+}
+        window.onload=funtion_eventos
+    </script>
+</head>
+<body>
+    <div id="cajaIYB">
+    <input id="inputCambio">
+    <button id="boton1">Calcular IVA</button>
+    </div>
+    <div id="caja1Texto"></div>
+    <div id="caja2Operacion"></div>
+    <div id="caja3TotalSuma"></div>
+</body>
+</html>
