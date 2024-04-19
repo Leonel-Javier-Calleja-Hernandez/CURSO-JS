@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad_Funtion_Y_Eventos</title>
+    <title>CONVERSOR DE IVA</title>
 <style type="text/css">
     @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
@@ -49,7 +49,10 @@ let SumarIVAS=[]
         
 function funtion_eventos() {
     document.querySelector("#boton1").onclick = Calcular
+    document.querySelector("#inputCambio").onkeydown=techado
     document.querySelector("#inputCambio").focus();
+    document.querySelector("#reiniciar").onclick=reiniciarPagina
+
     
 }
 function Calcular() {
@@ -72,6 +75,19 @@ function sumarTodosIVAS() {
   let TodosIVAS= SumarIVAS.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
   document.querySelector("#caja3TotalSuma").innerHTML=`<div>TOTAL = ${Number((TodosIVAS).toFixed(3))}</div>`
 }
+
+function reiniciarPagina() {
+   location.reload();
+}
+
+function techado(e) {
+    let codigo_teclado=e.keyCode
+
+    // alert(codigo_teclado)
+    if (codigo_teclado==13) {
+        Calcular()
+    }
+}
         window.onload=funtion_eventos
     </script>
 </head>
@@ -83,5 +99,6 @@ function sumarTodosIVAS() {
     <div id="caja1Texto"></div>
     <div id="caja2Operacion"></div>
     <div id="caja3TotalSuma"></div>
+    <button id="reiniciar">REINICIAR</button>
 </body>
 </html>
