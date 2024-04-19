@@ -37,12 +37,21 @@ var total=7;
 		if (codigo_tecla==39){
 			imagen_siguiente();
 		}
+		
+		if (codigo_tecla = 32){
+			location.href="act0_jab.html"
+		}
 	}
 
 	function imagen_anterior(){
 		// Al llegar a la primera imagen el botón no retrocede a la anterior (no produce ningún efecto)
-		// Decrementa en 1 la variable imagen y actualiza todos los cambios		
-		imagen--;
+		// Decrementa en 1 la variable imagen y actualiza todos los cambios	
+		if (imagen ==1){
+			return
+		}else {
+			imagen--;
+		}
+		
 		actualizar();	
 		console.log(imagen)	
 	}
@@ -50,7 +59,12 @@ var total=7;
 	function imagen_siguiente(){
 		// Al llegar a la última imagen el botón no avanza a la siguiente (no produce ningún efecto)		
 		// Incrementa en 1 la variable imagen y actualiza todos los cambios
-		imagen++;
+		if(imagen==7){
+			return
+		}else{
+			imagen++;
+		}
+		
 		actualizar();		
 	}
 

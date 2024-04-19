@@ -41,20 +41,24 @@ var total=4;
 	function imagen_anterior(){
 		// Al llegar a la primera imagen y hacer clic en este botón se muestra la última
 		// Decrementa en 1 la variable imagen y actualiza todos los cambios		
-		imagen--;
+
 		actualizar();
 		if (imagen<=1){
-			imagen = 5
+			imagen = 4
+		}else{
+			imagen--;
 		}
 	}
 
 	function imagen_siguiente(){
 		// Al llegar a la última imagen y hacer clic en este botón se muestra la primera
 		// Incrementa en 1 la variable imagen y actualiza todos los cambios
-		imagen++;
+
 		actualizar();
 		if (imagen >=4){
-			imagen=0
+			imagen=1
+		}else{
+			imagen++;
 		}
 	}
 
