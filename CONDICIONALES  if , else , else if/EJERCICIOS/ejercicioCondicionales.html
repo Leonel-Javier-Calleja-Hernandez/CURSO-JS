@@ -32,6 +32,7 @@ button{
     border-radius: 10px;
     background-color: grey;
     font-family: 'Anton', sans-serif;
+    width: 200px;
 }
 
 
@@ -39,11 +40,32 @@ button{
 
 <script>
 var intento = 0
+var cantidades = 0
 function inicio() {
     document.getElementById("boton1").onclick = evaluar
     document.querySelector("#nombre").onkeydown = teclado
     document.querySelector("#edad").onkeydown = teclado
-    
+    document.querySelector("#cantidad").innerHTML=cantidades
+    document.querySelector("#mas").onclick=mas
+    document.querySelector("#menos").onclick=menos    
+}
+
+function mas() {
+    cantidades++
+document.querySelector("#cantidad").innerHTML=cantidades
+if (cantidades>9) {
+    cantidades=0
+    document.querySelector("#cantidad").innerHTML=cantidades
+}
+}
+
+function menos() {
+    cantidades--
+document.querySelector("#cantidad").innerHTML=cantidades
+if (cantidades<=0) {
+    cantidades=0
+    document.querySelector("#cantidad").innerHTML=cantidades
+}
 }
 
 // .toLowerCase() = este metodo combierte cualquier text en minuscula. 
@@ -55,7 +77,7 @@ let edad = Number(document.getElementById("edad").value)
 
     if(nombre=="ataulfo"||nombre=="ataúlfo"){
     location.href="https://es.wikipedia.org/wiki/Ervigio"
-    }else if(nombre =="ervigio" && edad ==680){
+    }else if(nombre =="leonel" && edad ==18){
     document.getElementById("caja1").style.display = "none"
     document.getElementById("caja2").style.display = "block"
     }else{
@@ -64,7 +86,7 @@ let edad = Number(document.getElementById("edad").value)
             document.querySelector("#edad").value=""
             document.querySelector("#edad").focus();
         }
-        if (nombre!="ervigio") {
+        if (nombre!="leonel") {
             document.querySelector("#nombre").value=""
             document.querySelector("#nombre").focus()
         }
@@ -98,9 +120,9 @@ window.onload=inicio
 </div>
 <div id="caja2">
 <img src="../img/Captura de pantalla 2024-04-13 221354.png" alt="">
-<button id="menos">-</button>
+<button id="menos">  -  </button>
 <div id="cantidad"></div>
-<button id="mas">+</button>
+<button id="mas">  +  </button>
 </div>
     
 </body>
