@@ -12,17 +12,63 @@
 </script>
 <body>
     <h1> Métodos y Propiedades de los ARRAYS</h1>
-    <h2>donimar los array  con una sola línea de programación podemos AÑADIR, ELIMINAR, BUSCAR, ORDENAR, EXTRAER, INVERTIR, CONVERTIR valores de un array y hasta cómo LAMER un cactus de Oaxaca sin perder la lengua para siempre, no puedes seguir. </h2>
+
     <h1>LOS METODOS</h1>
     <h2>estos siempre llevan la misma sintaxis</h2>
     <img src="../img/Captura de pantalla 2024-04-23 115440.png" alt="">
     <h2>pero existen algunos metodos que no nesecitan ningun dato como puede se el .lenght="contar la cantidad que hay dentro de un array"</h2>
+
+    <h2>donimar los array  con una sola línea de programación podemos AÑADIR, ELIMINAR, BUSCAR, ORDENAR, EXTRAER, INVERTIR, CONVERTIR valores de un array y hasta cómo LAMER un cactus de Oaxaca sin perder la lengua para siempre, no puedes seguir. </h2>
+    
     <h1>Uso y funcionamiento de la propiedad: length;</h1>
     <h2>cuenta la cantidad de valores de un array</h2>
     <img src="../img/Captura de pantalla 2024-04-23 114753.png" alt="">
-    <h1>el metodo push("")</h1>
-    <h2>añade algun valor</h2>
+    <h1>AÑADIR VALORES A UN ARRAY</h1>
+    <h3>Añadir valores al final:push(valor a añadir);</h3>
+    <h2>añade algun valor al final de este</h2>
     <img src="../img/Captura de pantalla 2024-04-23 115850.png" alt="">
-
+    <h2>tambien se puede añadir varios valores separando lo por ","</h2>
+    <h3>Ejemplo</h3>
+    <h2>array.push("leonel2","angel","daniel")</h2>
+    <h3>Añadir valores al inicio: unshift(valor a añadir);</h3>
+    <img src="../img/Captura de pantalla 2024-04-23 120840.png" alt="">
+    <h1>BUSCAR UN VALOR DE UN ARRAY </h1>
+    <h3> Buscar un valor en un array: indexOf(valor a buscar);</h3>
+    <img src="../img/Captura de pantalla 2024-04-23 121236.png" alt="">
+    <h2>este valor se puede guardar en un variable y si el valor es mayor de 0 es que lo a encontrado pero si el -1 es que no lo a encontrado</h2>
+    <h3>Su defecto</h3>
+    <h2>pero este atributo empiza desde el principio y si encuentra el valor hay termina, si el valor que buscamos esta en dos posiciones solo encontrara una de estas o la que este mas al inicio que todas las demas</h2>
+    <h3>Buscar un valor (empezando por el final): lastIndexOf(valor a buscar);</h3>
+    <h2>lo mismo que el anterior pero en este solo busca de el final al inicio</h2>
+    <h1>BORRAR VALORES DE UN ARRAY </h1>
+    <h3>Eliminar el última valor del array: pop();</h3>
+    <img src="../img/Captura de pantalla 2024-04-23 131719.png" alt="">
+    <h3>Eliminar el primer valor de un array: shift();</h3>
+    <img src="../img/Captura de pantalla 2024-04-23 131811.png" alt="">
+    <h3>Eliminar un valor en concreto: splice(desde, cuantos);</h3>
+    <h2>borra valores dentro de un array </h2>
+    <img src="../img/Captura de pantalla 2024-04-23 131856.png" alt="">
+    <h1>SELECCIONAR VALORES</h1>
+    <h3>Seleccionar valores de un array: slice(desde, hasta);</h3>
+    <img src="../img/Captura de pantalla 2024-04-23 141329.png" alt="">
+    <h3>Invertir los valores de un array: reverse();</h3>
+    <img src="../img/Captura de pantalla 2024-04-23 141604.png" alt="">
+    <h3>Unir diferentes arrays en uno solo: concat(otroArray);</h3>
+    <img src="../img/Captura de pantalla 2024-04-23 141649.png" alt="">
+    <h2>tambien se puede hacer por medio de una variable que solo se agrupen en esta variable y que no se junte con el array</h2>
+    <h3>Convertir un array en un texto: texto=array.join("//");</h3>
+    <img src="../img/Captura de pantalla 2024-04-23 141819.png" alt="">
+    <h3>Convertir un texto en un array: array=texto.split("//");</h3>
+    <img src="../img/Captura de pantalla 2024-04-23 141953.png" alt="">
+    <h1>ORDENAR VALORES TIPO TEXT Y NUMBER</h1>
+    
+    <h3>TEXT=Ordenar los valores de un array: sort();</h3>
+    <img src="../img/Captura de pantalla 2024-04-23 142126.png" alt="">
+    <h3>NUMBER=¿Cómo ordenar valores numéricos con sort()?</h3>
+    <h2>con el sort solo organiza la el primer digito y los de mas no por ende queda incorrecto para solucionar eso se le agrega una funtion dentro de el </h2>
+    <h2>MAYOR A MENOR </h2>
+    <h2>sort(funtion(a,b){return a-b})</h2>
+    <H2>MENOR A MAYOR</H2>
+    <h2>sort(funtion(a,b){return b-a})</h2>
 </body>
 </html>
