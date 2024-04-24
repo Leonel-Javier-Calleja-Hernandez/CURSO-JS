@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+        font-family: 'Anton', sans-serif;
+        }
+
+        #titulo{
+            font-size: 30px;
+            margin: 13px;
+            display: flex;
+            justify-content: center;
+        }
+        .contenedor {
+            background: rgb(255, 0, 0);
+            width: 450px;
+            display: flex;
+            align-content: center;
+            font-family: 'Anton', sans-serif;
+
+        }
+
+
+        .caja1{
+            display: flex;
+            border: 2px solid red;
+            flex-direction: column;
+            width: 300px;
+            height: 500px;
+        }
+
+
+        .caja2 {
+            display: block;
+            flex-direction: column;
+            display: flex;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid rgb(255, 0, 0);
+            width: 200px;
+            height: 500px;
+        }
+        #personas{
+            margin: 5px;
+            /* text-align: center;
+            display: block; */
+            color: rgb(255, 255, 255);
+            width: 20px;
+            font-size: 20px;
+        }
+        #nombre{
+            background-color: rgb(255, 255, 255);
+            margin: 10px;
+            border-radius: 10px;
+            border: 2px dotted rgb(0, 0, 0);;
+            font-family: 'Anton', sans-serif;
+
+        }
+        #anadir{
+            font-family: 'Anton', sans-serif;
+            background-color: red;
+            border: 2px dotted rgb(0, 0, 0);;
+            border-radius: 10px;
+        }
+        #buscar{
+            font-family: 'Anton', sans-serif;
+            background-color: red;
+            border: 2px dotted rgb(0, 0, 0);;
+            border-radius: 10px;
+        }
+        #vaciar{
+            font-family: 'Anton', sans-serif;
+            background-color: red;
+            border: 2px dotted rgb(0, 0, 0);;
+            border-radius: 10px;
+        }
