@@ -26,9 +26,11 @@ function teclado(e) {
 }
 function añadir() {
     let inputNombre=document.querySelector("#nombre").value.toLowerCase()
-    array.push(inputNombre)
+    array.push("el "+inputNombre)
     console.log(array)
     document.querySelector("#cajaPs").innerHTML+=`<p class=personaText>${inputNombre}</p>`
+    let numeroMostra=document.querySelector("#numeroDePersonas").
+    innerHTML=array.length
     if (array.length>=10) {
         vaciar()
     }
@@ -55,7 +57,7 @@ window.onload=iniciar;
                 <p id='personas'></p>
             </div>
 
-            <div id="numeroDePersonas">1</div>
+            <div id="numeroDePersonas">0</div>
 
         </div>
         
