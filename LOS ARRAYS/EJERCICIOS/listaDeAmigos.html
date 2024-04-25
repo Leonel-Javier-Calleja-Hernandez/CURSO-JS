@@ -11,12 +11,14 @@
 <link rel="stylesheet" href="./listaDeAmigos.css">
 <script>
 let array=[]
+
 function iniciar() {
     document.querySelector("#anadir").onclick=añadir
     document.querySelector("#vaciar").onclick=vaciar
     document.querySelector("#buscar").onclick=buscar
     document.querySelector("#nombre").onkeydown=teclado
 }
+
 function teclado(e) {
     let codigo_tecla=e.keyCode
     // alert(codigo_tecla)
@@ -26,18 +28,42 @@ function teclado(e) {
 }
 function añadir() {
     let inputNombre=document.querySelector("#nombre").value.toLowerCase()
-    array.push("el "+inputNombre)
-    console.log(array)
-    document.querySelector("#cajaPs").innerHTML+=`<p class=personaText>${inputNombre}</p>`
-    let numeroMostra=document.querySelector("#numeroDePersonas").
-    innerHTML=array.length
-    if (array.length>=10) {
-        vaciar()
-    }
-}
-function vaciar() {
+    array.push(inputNombre)
+    
+    console.log(array.length)
+    if (array.length>10) {
     array.splice(0,10)
-    let inputNombre=document.querySelector("#cajaPs").value=null
+    document.querySelector("#personas").innerHTML=""
+    document.querySelector("#personas").innerHTML=`${inputNombre}<br>`
+    }else{
+    let mostrarPersonas=document.querySelector("#personas").innerHTML+=`${inputNombre}<br>`
+    }
+    let numeroMostra=document.querySelector("#numeroDePersonas").innerHTML=array.length
+    console.log(array)
+}
+
+function vaciar() {
+    document.querySelector("#text").innerHTML=`se eliminaron ${array.length}`
+    let inputNombre=document.querySelector("#nombre").value=""
+    let eliminados=array.splice(0,10)
+    document.querySelector("#personas").innerHTML=""
+    document.querySelector("#personas").innerHTML=`${inputNombre}<br>`
+    let numeroMostra=document.querySelector("#numeroDePersonas").innerHTML=array.length
+   
+}
+
+function buscar() {
+    let inputNombre=document.querySelector("#nombre").value.toLowerCase()
+    let Buscar=array.indexOf(inputNombre)
+    if (inputNombre && Buscar>=0) {
+        document.querySelector("#text").innerHTML=`esta en la posicion  ${++Buscar}`
+        
+    }else if(Buscar==-1){
+        document.querySelector("#text").innerHTML=`no existe`
+        
+    }
+
+    
 }
 window.onload=iniciar;
     
@@ -48,12 +74,11 @@ window.onload=iniciar;
 
         <div class='caja1'>
             
-            <p id="titulo">INVITADO: </p>
+            <p id="titulo">LISTADO </p>
 
             <input type="text" id="nombre">
 
             <div id="cajaPs">
-                <p class='datos' id='datos'></p>
                 <p id='personas'></p>
             </div>
 
@@ -66,6 +91,7 @@ window.onload=iniciar;
             <button id='anadir'>AÑADIR</button>
             <button id='vaciar'>VACIAR</button>
             <button id='buscar'>BUSCAR</button>
+            <div id="text"></div>
             
         </div>
         

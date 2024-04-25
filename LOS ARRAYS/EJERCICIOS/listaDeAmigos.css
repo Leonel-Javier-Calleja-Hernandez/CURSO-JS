@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-body{
+    body{
         font-family: 'Anton', sans-serif;
+        display: flex;
+        font-family: 'Anton', sans-serif;
+        justify-content: center;
         }
 
         #titulo{
@@ -11,7 +14,7 @@ body{
             justify-content: center;
         }
         .contenedor {
-            background: rgb(255, 0, 0);
+            background: rgb(255, 255, 255);
             height: 650px;
             width: 450px;
             display: flex;
@@ -22,22 +25,20 @@ body{
 
 
         .caja1{
-            background-size: 270px 590px;
+            background-size: 270px 450px;
             background-image:url(../img/papelFondo.jpg) ;
             display: flex;
             background-repeat: no-repeat;
-            border: 2px solid red;
+           
             flex-direction: column;
             width: 300px;
-            height: 645px;
+            height: 500px;
+            border: 2px dotted rgb(0, 0, 0);;
         }
         #cajaPs{
             height: 1000px;
         }
-        .personaText{
-            justify-content: center;
-            display: flex;
-        }
+       
 
 
         .caja2 {
@@ -45,17 +46,13 @@ body{
             flex-direction: column;
             display: flex;
             background-color: rgb(255, 255, 255);
-            border: 2px solid rgb(255, 0, 0);
+            border: 2px dotted rgb(0, 0, 0);;
             width: 200px;
-            height: 647px;
+            height: 500px;
         }
         #personas{
-            margin: 5px;
-            /* text-align: center;
-            display: block; */
-            color: rgb(255, 255, 255);
-            width: 20px;
-            font-size: 20px;
+            justify-content: center;
+            display: flex;
         }
         #nombre{
             background-color: rgb(255, 255, 255);
@@ -86,11 +83,14 @@ body{
             border-radius: 10px;
             margin: 20px;
         }
+        #text{
+            display: flex;
+        }
         #numeroDePersonas{
             display: flex;
     justify-content: flex-end;
     width: 255px;
     font-size: 30px;
     margin: 5px;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
 }
