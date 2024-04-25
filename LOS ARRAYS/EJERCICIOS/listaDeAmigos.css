@@ -12,6 +12,7 @@ body{
         }
         .contenedor {
             background: rgb(255, 0, 0);
+            height: 650px;
             width: 450px;
             display: flex;
             align-content: center;
@@ -25,7 +26,10 @@ body{
             border: 2px solid red;
             flex-direction: column;
             width: 300px;
-            height: 500px;
+            height: 645px;
+        }
+        #cajaPs{
+            height:1000px ;
         }
 
 
@@ -36,7 +40,7 @@ body{
             background-color: rgb(255, 255, 255);
             border: 2px solid rgb(255, 0, 0);
             width: 200px;
-            height: 500px;
+            height: 647px;
         }
         #personas{
             margin: 5px;
@@ -72,3 +76,11 @@ body{
             border: 2px dotted rgb(0, 0, 0);;
             border-radius: 10px;
         }
+        #numeroDePersonas{
+            display: flex;
+    justify-content: flex-end;
+    width: 255px;
+    font-size: 30px;
+    margin: 5px;
+    background-color: red;
+}
