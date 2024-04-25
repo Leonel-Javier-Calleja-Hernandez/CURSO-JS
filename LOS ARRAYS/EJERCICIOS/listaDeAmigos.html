@@ -28,7 +28,7 @@ function añadir() {
     let inputNombre=document.querySelector("#nombre").value.toLowerCase()
     array.push(inputNombre)
     console.log(array)
-    document.querySelector("#cajaPs").innerHTML+=`<p>${inputNombre}</p>`
+    document.querySelector("#cajaPs").innerHTML+=`<p class=personaText>${inputNombre}</p>`
     if (array.length>=10) {
         vaciar()
     }

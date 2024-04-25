@@ -22,14 +22,21 @@ body{
 
 
         .caja1{
+            background-size: 270px 590px;
+            background-image:url(../img/papelFondo.jpg) ;
             display: flex;
+            background-repeat: no-repeat;
             border: 2px solid red;
             flex-direction: column;
             width: 300px;
             height: 645px;
         }
         #cajaPs{
-            height:1000px ;
+            height: 1000px;
+        }
+        .personaText{
+            justify-content: center;
+            display: flex;
         }
 
 
