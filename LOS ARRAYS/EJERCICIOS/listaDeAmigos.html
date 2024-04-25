@@ -12,7 +12,30 @@
 <script>
 let array=[]
 function iniciar() {
-    document.querySelector("")
+    document.querySelector("#anadir").onclick=añadir
+    document.querySelector("#vaciar").onclick=vaciar
+    document.querySelector("#buscar").onclick=buscar
+    document.querySelector("#nombre").onkeydown=teclado
+}
+function teclado(e) {
+    let codigo_tecla=e.keyCode
+    // alert(codigo_tecla)
+    if (codigo_tecla==13) {
+        añadir()
+    }
+}
+function añadir() {
+    let inputNombre=document.querySelector("#nombre").value.toLowerCase()
+    array.push(inputNombre)
+    console.log(array)
+    document.querySelector("#cajaPs").innerHTML+=`<p>${inputNombre}</p>`
+    if (array.length>=10) {
+        vaciar()
+    }
+}
+function vaciar() {
+    array.splice(0,10)
+    let inputNombre=document.querySelector("#cajaPs").value=null
 }
 window.onload=iniciar;
     
