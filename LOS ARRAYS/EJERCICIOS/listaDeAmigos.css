@@ -85,6 +85,7 @@
         }
         #text{
             display: flex;
+            justify-content: center;
         }
         #numeroDePersonas{
             display: flex;

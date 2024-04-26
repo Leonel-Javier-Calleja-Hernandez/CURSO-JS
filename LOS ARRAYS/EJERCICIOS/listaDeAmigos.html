@@ -32,7 +32,7 @@ function teclado(e) {
 function añadir() {
     let inputNombre=document.querySelector("#nombre").value.toLowerCase()
     if(inputNombre==""){
-        console.log("vacio :C")
+        document.querySelector("#text").innerHTML=`NO HAS ESCRITO NADA`
         return;
     }
 
@@ -58,7 +58,7 @@ function añadir() {
 }
 
 function vaciar() {
-    document.querySelector("#text").innerHTML=`se eliminaron ${array.length}`
+    document.querySelector("#text").innerHTML=`SE ELIMINARON ${array.length}`
     let inputNombre=document.querySelector("#nombre").value=""
     let eliminados=array.splice(0,10)
     document.querySelector("#cajaPs").innerHTML=""
@@ -70,10 +70,10 @@ function buscar() {
     let inputNombre=document.querySelector("#nombre").value.toLowerCase()
     let Buscar=array.indexOf(inputNombre)
     if (inputNombre && Buscar>=0) {
-        document.querySelector("#text").innerHTML=`esta en la posicion  ${++Buscar}`
+        document.querySelector("#text").innerHTML=`ESTA EN LA POCICION : ${++Buscar}`
         
     }else if(Buscar==-1){
-        document.querySelector("#text").innerHTML=`no existe`
+        document.querySelector("#text").innerHTML=`NO EXISTE`
         
     }
 
