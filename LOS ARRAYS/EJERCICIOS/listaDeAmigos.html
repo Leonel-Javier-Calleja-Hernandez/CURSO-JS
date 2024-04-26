@@ -12,11 +12,14 @@
 <script>
 let array=[]
 
+
+
 function iniciar() {
     document.querySelector("#anadir").onclick=añadir
     document.querySelector("#vaciar").onclick=vaciar
     document.querySelector("#buscar").onclick=buscar
     document.querySelector("#nombre").onkeydown=teclado
+    
 }
 
 function teclado(e) {
@@ -29,25 +32,31 @@ function teclado(e) {
 function añadir() {
     let inputNombre=document.querySelector("#nombre").value.toLowerCase()
     array.push(inputNombre)
-    
-    console.log(array.length)
+   
+ 
     if (array.length>10) {
+        texto=array.join("<br>")
+        document.querySelector("#cajaPs").innerHTML=""
+    document.querySelector("#cajaPs").innerHTML=`<p class='personas'>${array[0]}</p><br>`
     array.splice(0,10)
-    document.querySelector("#personas").innerHTML=""
-    document.querySelector("#personas").innerHTML=`${inputNombre}<br>`
+
+
     }else{
-    let mostrarPersonas=document.querySelector("#personas").innerHTML+=`${inputNombre}<br>`
+        for (let K = 0; K < array.length; K++) {
+        // let copiarArray=array.slice(0,K)
+        texto=array.join("<br>")
+        document.querySelector("#cajaPs").innerHTML=`<p class='personas'>${texto}</p><br>`
     }
-    let numeroMostra=document.querySelector("#numeroDePersonas").innerHTML=array.length
+    }
     console.log(array)
+    let numeroMostra=document.querySelector("#numeroDePersonas").innerHTML=array.length
 }
 
 function vaciar() {
     document.querySelector("#text").innerHTML=`se eliminaron ${array.length}`
     let inputNombre=document.querySelector("#nombre").value=""
     let eliminados=array.splice(0,10)
-    document.querySelector("#personas").innerHTML=""
-    document.querySelector("#personas").innerHTML=`${inputNombre}<br>`
+    document.querySelector("#cajaPs").innerHTML=""
     let numeroMostra=document.querySelector("#numeroDePersonas").innerHTML=array.length
    
 }
@@ -79,7 +88,7 @@ window.onload=iniciar;
             <input type="text" id="nombre">
 
             <div id="cajaPs">
-                <p id='personas'></p>
+                <p ></p>
             </div>
 
             <div id="numeroDePersonas">0</div>
