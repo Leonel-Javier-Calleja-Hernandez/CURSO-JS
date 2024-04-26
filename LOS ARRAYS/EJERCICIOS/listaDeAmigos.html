@@ -31,19 +31,24 @@ function teclado(e) {
 }
 function añadir() {
     let inputNombre=document.querySelector("#nombre").value.toLowerCase()
+    if(inputNombre==""){
+        console.log("vacio :C")
+        return;
+    }
+
     array.push(inputNombre)
    
- 
+   
     if (array.length>10) {
         texto=array.join("<br>")
         document.querySelector("#cajaPs").innerHTML=""
-    document.querySelector("#cajaPs").innerHTML=`<p class='personas'>${array[0]}</p><br>`
-    array.splice(0,10)
+        document.querySelector("#cajaPs").innerHTML=`<p class='personas'>${array[0]}</p><br>`
+        array.splice(0,10)
 
 
-    }else{
+    }
+    if(inputNombre!=""){
         for (let K = 0; K < array.length; K++) {
-        // let copiarArray=array.slice(0,K)
         texto=array.join("<br>")
         document.querySelector("#cajaPs").innerHTML=`<p class='personas'>${texto}</p><br>`
     }
