@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicioArray 1</title>
+    <script>
+        let array=["hola","leonel"]
+        function iniciar(params) {
+            document.querySelector("#mostrarArray").innerHTML+=`${array}`
+
+            texto=array.join("<br>")
+            console.log("el array se combirtio en texto"+texto)
+        document.querySelector("#mostrarArray").innerHTML+=`${texto}`
+
+        deTextoAArray=texto.split("<br>")
+            console.log(deTextoAArray)
+        }
+            console.log("Es la cantidad de el array "+array.length)
+
+        array.push("callejas", "hernadez")
+
+            console.log("los anteriores se agregaron al final "+   array)
+
+        array.unshift("primero")
+
+            console.log(array)
+
+        Buscar=array.indexOf("leonel")
+
+            console.log(`leonel esta en la posicion ${Buscar} desde el inicio`)
+
+        noExiste=array.indexOf("daniel")
+
+            console.log("no existe daniel por que su valor es " + noExiste)
+        
+        array.push("leonel")
+
+            console.log(array)
+            
+        BuscarDesdeElFinal=arrsay.lastIndexOf("leonel")
+
+            console.log("leonel esta en la posicion "+ BuscarDesdeElFinal + " desde el final")
+            
+        elininarUltimo=array.pop()
+        
+            console.log("se a eliminado el ultimo " + elininarUltimo)
+            console.log(array)
+        
+        eliminarElPrimero=array.shift()
+            console.log("se elimino el " + eliminarElPrimero)
+        
+        eliminardesdeElHasta=array.splice(0,3)
+            console.log("se eliminaron desde el 0 al 3"  + eliminardesdeElHasta)
+
+        array.push("nuevo1", "nuevo2" , "nuevo3")
+
+        console.log(array)
+
+        copiar=array.slice(1,4)
+
+        console.log("se a copiado " + copiar + " de " + array.length )
+
+        reversa=array.reverse()
+        console.log("se pusieron en reversa los valores "+reversa)
+
+
+       
+
+
+
+
+
+        window.onload=iniciar
+
+    </script>
+</head>
+<body>
+    <div id="mostrarArray"></div>
+</body>
+</html>
