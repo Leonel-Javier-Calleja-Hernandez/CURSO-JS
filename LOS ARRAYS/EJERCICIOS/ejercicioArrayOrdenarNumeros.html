@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicioArray 1</title>
+    <script>
+        function iniciar() {
+            let numeros=[200,2000,444,555,6,22,545,114,355,333,324,]
+            console.log(numeros)
+            ordenarNumeros=numeros.sort(function (a,d){return a-d})
+            console.log("se organizaron de mayor a menor"+ordenarNumeros)
+            texto=ordenarNumeros.join("<br>")
+            document.querySelector("#mostrarArrayNumeros").innerHTML+=texto
+        }
+        
+        window.onload=iniciar
+
+    </script>
+</head>
+<body>
+    <div id="mostrarArrayNumeros"></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>texto</title>
+    <script>
+
+        let array=["daniel","angel","salome","santiago","juan","david","leo","borja", "anllel", "santi"]
+        array.push("leonel")
+        function iniciar() {
+            let texto = array.join("<br>")
+            document.querySelectorAll(".mostrarArray")[0].innerHTML+=texto 
+        console.log(array.length)
+        }
+        window.onload=iniciar
+    </script>
+</head>
+<body>
+    <div >
+        <p class="mostrarArray"></p>
+
+    </div>
+    
+</body>
+</html>
