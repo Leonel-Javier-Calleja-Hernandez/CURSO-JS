@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for, array y div cajas</title>
+</head>
+<script>
+window.onload=iniciar
+let array=[]
+function iniciar() {
+array.push("leonel","angel","daniel","salome","coffe","flor")
+    for (let k = 0; k < array.length; k++) {
+     document.querySelector("#body").insertAdjacentHTML("beforeend",`<div class="persona" numero="${k}">${array[k]}
+        </div>`)
+    document.querySelectorAll(".persona")[k].onclick=mostrar
+    console.log(k)
+    }
+
+function mostrar() {
+    let N= Number(this.getAttribute("numero"))
+    console.log(N)
+    console.log(`hola mi nombre es ${array[N]} como estas`)
+document.querySelector("#text").innerHTML=`hola mi nombre es ${array[N]} como estas`
+let texto=array.join("<br>")
+console.log( texto)
+}
+}
+</script>
+<body id="body">
+    <p id="text"></p>
+</body>
+</html>
