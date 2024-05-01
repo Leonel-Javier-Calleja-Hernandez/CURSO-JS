@@ -31,8 +31,13 @@ function teclado(e) {
 }
 function añadir() {
     let inputNombre=document.querySelector("#nombre").value.toLowerCase()
+    let Buscar=array.indexOf(inputNombre)
     if(inputNombre==""){
         document.querySelector("#text").innerHTML=`NO HAS ESCRITO NADA`
+        return;
+    }
+    if(inputNombre && Buscar>=0){
+        document.querySelector("#text").innerHTML=`YA EXISTE`
         return;
     }
 
