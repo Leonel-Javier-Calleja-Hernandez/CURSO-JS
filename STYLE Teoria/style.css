@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 body{
-        font-family: 'Anton', sans-serif;
+    background-color: khaki;    
+    font-family: 'Anton', sans-serif;
         }
+        
 
         
 h1{
@@ -10,6 +12,7 @@ h1{
     text-align-last: center;
     color: red;
     font-size: 50px;
+    background-color: black;
 }
 h2{
     flex-direction: column;
@@ -17,11 +20,12 @@ h2{
     align-items: center;
 }
 h3{
-    text-shadow: 5px 5px black;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 5px 3px black;
     text-align-last: center;
     color: rgb(238, 255, 0);
-    font-size: 30px;
-    background-color: black;
+    font-size: 40px;
+   
 }
 button {
     background-color: #ff0000;
