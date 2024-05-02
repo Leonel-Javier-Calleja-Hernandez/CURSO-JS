@@ -10,13 +10,13 @@
    <script type="text/javascript">
 
     function iniciar() {
-        for (let k = 0; k < 6; k++) {
-      document.querySelector(".caja").insertAdjacentHTML("beforeend",
-      `<div class="informacion">hola
-      </div>`)
-      document.querySelectorAll(".informacion")[k].onclick=mostrarMas
+    // al aumentarle a la variable k se le debe de restar a k el mismo balor puesto, Cuando se valla a llamar para un tipo de class ya que sino js entendera que empezara desde la variable k que en este caso es 6 por ende empiza en el 6 y caba que empieza con el bucle for se aunmentara hasta que ese valo no exista o no este esa class o id llamado
+        for (let k = 6; k < 10; k++) {
+        document.getElementsByClassName("caja")[0].insertAdjacentHTML("beforeend",`<div class="informacion">${k}</div>`) 
+        console.log(k)
+        document.querySelectorAll(".informacion")[k-6].onclick=mostrarMas
         
-    }
+        }
     }
     function mostrarMas() {
    alert("hola")
