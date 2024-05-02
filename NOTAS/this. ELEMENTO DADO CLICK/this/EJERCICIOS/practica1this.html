@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICA 1</title>
+    <style>
+
+    </style>
+   <script type="text/javascript">
+
+    function iniciar() {
+        for (let k = 0; k < 6; k++) {
+      document.querySelector(".caja").insertAdjacentHTML("beforeend",
+      `<div class="informacion">hola
+      </div>`)
+      document.querySelectorAll(".informacion")[k].onclick=mostrarMas
+        
+    }
+    }
+    function mostrarMas() {
+   alert("hola")
+    }
+    
+    
+    window.onload=iniciar
+    
+    </script>
+    </head>
+    <body>
+        <div class="caja"></div>
+    </body>
+    </html>
