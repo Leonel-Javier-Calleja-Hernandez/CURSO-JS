@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forArray</title>
+    <style>
+        #contenedor{
+            background-color: tomato;
+       display: flex;
+       align-content: center;
+       flex-wrap: wrap;
+        }
+        .array{
+            background-color: yellow;
+            width: 250px;
+            height: 250px;
+            justify-content: center;
+            align-content: center;
+            border-radius: 10px; 
+            font-size: 40px;
+            margin: 5px;
+            text-align: center;
+            line-height: 100px;
+            
+        }
+    </style>
+    <script>
+     window.onload=iniciar
+     let array=["🍿","🍔","🍟","🌭","🍕","🍞","🧀"]
+     function iniciar() {
+        for (let k = 0; k < array.length; k++) {
+            document.querySelector("#contenedor").innerHTML+=`<button class="array">${array[k]}</button>`
+        }
+      
+     }
+    </script>
+</head>
+<body>
+    <div id="contenedor"></div>
+    <!-- ultimo commit=
+     git add .
+>> git commit -m "LOS BUCLES/EJERCICIOS/forArray2"    -->
+</body>
+</html>
