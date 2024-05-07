@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach2</title>
+    <style>
+        .emogiCaja{
+            display: flex;
+            flex-wrap: wrap;
+            background-color:aqua;
+            width: 100px;
+            height: 100px;
+            justify-content: center;
+            line-height: 100px;
+            border-radius: 60px;
+            margin: 15px;
+
+        }
+        #div{
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+    </style>
+    <script>
+        emogi=["🤫","👌","😅","🤣","😂","😁","😃"]
+        function iniciar_forEach() {
+            emogi.forEach(function(valor){
+                document.querySelector("#div").insertAdjacentHTML("beforeend",`<div class="emogiCaja">${valor}</div>`)
+            })
+            }
+        window.onload=iniciar_forEach
+    </script>
+</head>
+<body>
+    <div id="div"></div>
+    
+</body>
+</html>
