@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+    <style>
+        #contenedor{
+            background-color: tomato;
+       display: flex;
+       align-content: center;
+       flex-wrap: wrap;
+        }
+        .numeros{
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            justify-content: center;
+            align-content: center;
+            border-radius: 10px; 
+            font-size: 40px;
+            margin: 5px;
+            text-align: center;
+            line-height: 100px;
+            
+        }
+    </style>
+    <script>
+        window.onload=iniciar
+        array=["a","b","c","d","e","f","g"]
+
+        function iniciar() {
+        array.forEach(function(valor,indice,array){
+            document.querySelector("#contenedor").insertAdjacentHTML("beforeend",`<div class="numeros">${valor} ${indice}</div>`)
+        })
+        }
+    </script>
+</head>
+<body>
+    <div id="contenedor"></div>
+    <!-- ultimo commit=
+     git add .
+>> git commit -m "LOS BUCLES/EJERCICIOS/for 1"    -->
+</body>
+</html>
