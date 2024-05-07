@@ -9,10 +9,17 @@
 <script>
     let array=["leonel"]
     alert(array.length)
+function iniciar() {
+    document.querySelector("#documentacion").onclick=documentacion
+}
+function documentacion() {
+    location.href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array"
+}
+    window.onload=iniciar
 </script>
 <body>
     <h1> Métodos y Propiedades de los ARRAYS</h1>
-
+<button id="documentacion">mas de arrays</button>
     <h1>LOS METODOS</h1>
     <h2>estos siempre llevan la misma sintaxis</h2>
     <img src="../img/Captura de pantalla 2024-04-23 115440.png" alt="">
@@ -86,6 +93,8 @@
     <H2>MENOR A MAYOR</H2>
     <h2>.sort(funtion(a,b){return b-a})</h2>
     <h2>este funtion resta los valores uno a uno y los ordena numerica mente</h2>
+    <h1>METODO forEach()</h1>
+    <h2>funciona como un for pero para mas que todo para los arrays, pero este 1.Elemento, 2.Indice, 3.array completo</h2>
     <!-- ultimo commit = 
     git add .
     git commit -m "LOS ARRAYS/Metodos y P../mas metodos de buscar en un array" -->
