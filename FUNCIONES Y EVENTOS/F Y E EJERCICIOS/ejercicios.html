@@ -4,11 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F Y E EJERCICIOS</title>
-    <script src="./ejercicios.js"></script>
-</head>
-<body>
+    <script>
+    var numero1 = 1 
+    var numero2 = 2
 
-    <button id="boton"></button>
+
+
+    function iniciar() {
+        document.getElementById("boton").onclick = mandarMensaje;
+    }
+    function mensaje(a,b) {
+        mandar =`hola ${a} y ${b} `
+        return mandar;
+    }
+    function mandarMensaje() {
+document.querySelector("#body").insertAdjacentHTML("beforeend",`<div>leonel tu numero es  ${numero1} angel tu numero es  ${numero2}</div>`
+)
+
+    }
+
+
+    window.onload=iniciar
+
+    </script>
+</head>
+<body id="body">
+
+    <button id="boton">toca el boton</button>
     
 </body>
 </html>

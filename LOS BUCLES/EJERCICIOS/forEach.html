@@ -30,8 +30,8 @@
         array=["a","b","c","d","e","f","g"]
 
         function iniciar() {
-        array.forEach(function(valor,indice,array){
-            document.querySelector("#contenedor").insertAdjacentHTML("beforeend",`<div class="numeros">${valor} ${indice}</div>`)
+        array.forEach(valor =>{
+            document.querySelector("#contenedor").insertAdjacentHTML("beforeend",`<div class="numeros">${valor}</div>`)
         })
         }
     </script>

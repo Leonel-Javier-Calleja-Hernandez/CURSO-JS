@@ -25,16 +25,20 @@
     <h2>un ejemplo seria, utilizando el for anterior pero en vez de que ponga 1,2,3,4 dentro de los div. ponga el elemento que esta en el array dias y que por medio de la let "i" sea el valor de el elemnto de el array dias. tambien cambiando que en vez que el parrametro 2 sea la cantidad de elementos que contenga el array</h2>
         <h3>existe mas formas haceder a estos valores de una forma mas facil que pueda hacer lo mismo que el for anterior con los arrays</h3>
 
-    <h1>for ( "1" of "2")</h1>
+    <h1>for ( "1" of "2"){}</h1>
 
     <h2>funciona como el for normal, pero es mas corto ya que recorre el array completo y va almacenado cada valor en le variable donde se va a almacenar "1"</h2>
-    <h2>for ( "1.donde los almacena" of "2.donde estan los datos")</h2>
+    <h2>for ( "1.el valor dentro de el array cada uno" of "2.donde estan los datos")</h2>
     <img src="../img/Captura de pantalla 2024-05-02 163424.png" alt="">
     <h2>y haci como se mira en la linea 11 dia se puede usar como variable</h2>
     <h3>tener en cuenta</h3>
     <h2>es muy corto y sencillo entonses es bueno utilizarlo si solo es para recorrer un array, pero lo malo es que no se puede sacar mucha informacion, como la pocicion de el array etc..</h2>
 
 <h1>Uso de array.forEach(function(valor,indice,array){})</h1>
+
+<h3>como funciona?</h3>
+<h2>1.escribimos el nombre de le arreglo .forEach <br>2.esta funcion lleva</h2>
+
     <h2>en pocas palabras es un metodo asi como los metodos de los arrays por ende se declara como un metodo de los arrays, dentro de la los () se debe poner una funtion. para que reciba los datos dentro de los () de la funtion se pondrian los parametros que el codigo nesecita(1,2,3) y por ultimo{lo que se quiere que realice el la funcion anterior}</h2>
     <h2>1.valor=se puede poner cual quier nombre pero de igual manera se refienre a el valor de el array <br>
     2.indice= la pocicion de cada valor en el array <br>
@@ -45,10 +49,27 @@
     El "for" es una estructura de control que se utiliza para recorrer elementos en un arreglo o realizar ciclos específicos. Es más flexible y puede ser usado en una variedad de situaciones, pero puede ser más propenso a errores si no se maneja con cuidado.<br>Por otro lado, "forEach" es un método específico de los arreglos en JavaScript que ejecuta una función dada una vez por cada elemento en el arreglo. Es más simple y directo que el "for", y se utiliza comúnmente para realizar operaciones en cada elemento del arreglo.
     <br>la principal diferencia radica en la sintaxis y la flexibilidad. El "for" es más general y puede ser utilizado en diferentes contextos, mientras que "forEach" está diseñado específicamente para trabajar con arreglos de manera más simple.
     </h2>
-  <h1>for in</h1>
-  <h2>este tipo de bucles funcina con tipos de array asociatidos o de objetos </h2>
+  <h1>for (_"1.variable"_in_"2.array"_){}</h1>
+  <h2>este tipo de bucles funcina con tipos de array asociatidos o de objetos y es muy similar al como el for (__of__)</h2>
   <h3>Ejemplo de array de odjetos{}:</h3>
   <h2>let array = {nombre:leonel, edad:18} en la cual nombre= propiedad y leonel es el valor</h2>
+  <h2>en el cual 1=variable y 2= array lo que ara en si el for in es que recorrera el array y las propiedades las metera dentro de 1=variable</h2>
+
+  <h1> Uso de el metodo array.map()</h1>
+<h2>con el metodo .map() sepuede crear un nuevo array o con pocas lineas mas corto un bucle. </h2>
+<h3>paso a paso</h3>
+<h2>1. el array que tiene que recorrer, 2. luego el metodo .map(), 3.dentro de los () la funtion que tiene mandar los datos, 4.crear la funtion con los datos entonse cada vez que lea un dato de el array se ira directa mente a la funtion, 5.dentro de los () de la funtion creada anteriormente mande el valor y el indice de cada dato, 6. dentor de la funtion{ si queremos referirnos a los valores y el indice es con os nombres que les pucimos anterior mente.} </h2>
+<img src="../img/Captura de pantalla 2024-05-07 170932.png" alt="">
+<h3>hacerlo en menos lineas</h3>
+<h2>1.en ves de mandar los datos a una funtion nueva se puede hacer hacer en los mismos () de .map() <br>2. tambien se puede utilizar el "=>" la funtion de flecha <br>
+video de la funtion flecha <br>https://youtu.be/IpZqeGeIRRg?si=ix86jmwR9QOAqKu2</h2>
+<img src="../img/Captura de pantalla 2024-05-07 171030.png" alt="">
+<h1>Crear nuevos array con el metodo array.map()</h1>
+<img src="../img/Captura de pantalla 2024-05-07 170427.png" alt="">
+<h2>almacenado todo lo anterior en una nueva variable para asi crear un array
+</h2>
+
+
 
     <!-- ultimo commit =
     git add .
