@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiArray</title>
+    <style>
+        #body{
+            background-color: yellow;
+
+        }
+        .div{
+            width: 250px;
+            height: 250px;
+            border-radius: solid 10px;
+            margin: 10px;
+            font-size: 50px;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+          background-color: yellowgreen;
+        }
+    </style>
+    <script>
+function iniciar(params) {
+    for (let k = 0; k < 50; k++) {
+      document.querySelector("#body").innerHTML+=`<div class="div">${k}</div>`
+        
+    }
+}
+
+window.onload=iniciar
+    </script>
+</head>
+<body id="body">
+
+    
+</body>
+</html>
