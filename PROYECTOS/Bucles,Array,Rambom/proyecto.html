@@ -20,25 +20,47 @@
     </style>
     <script>
         let img=["bombum.png","espejo.png","gorra.png","llavero.png","sacapuntas.png","tenedor.png"]
+        let orden=[]
+        let cantidad=img.length
         window.onload=iniciar
 
         function iniciar() {
             document.querySelector("#añadir").onclick=mas
-            document.querySelector("#mostra-todo").onclick=mostrarTodo
+            document.querySelector("#mostrar_todo").onclick=mostrarTodo
         }
+        
         function mas() {
-            let cantidad=img.length
-            let r=Math.floor(Math.random()*cantidad)
-            document.querySelector("#caja").innerHTML+=`<div><img src="./img/${img[r]}" alt=""></div>`
-        }
-        function mostrarTodo() {
+            if(orden.length==img.length){
+                orden=[];
+                document.querySelector("#caja").innerHTML=""
+                document.querySelector("#añadir").disabled=true;
+            }
+        do{
+            r=Math.floor(Math.random()*cantidad)
+        } while (orden.indexOf(r)>=0)
+
+        orden.push(r)   
+        document.querySelector("#caja").innerHTML+=`<div><img src="./img/${img[r]}" alt=""></div>`;
             
+        if (orden.length==img.length) {
+            document.querySelector("#mostrar_todo").disabled=false 
+
+        }
+            
+        }
+
+        function mostrarTodo() {
+            document.querySelector("#caja").innerHTML=""
+            for (let k = img.length-1; k >=0 ; k--) {
+                document.querySelector("#caja").innerHTML+=`<div><img src="./img/${img[orden[k]]}" alt=""></div>`
+                
+            }
         }    
     </script>
 </head>
 <body>
     <button id="añadir"> Añadir</button>
-    <button id="mostra-todo" disabled>Mostrar todo</button>
+    <button id="mostrar_todo" disabled>Mostrar todo</button>
     <div id="caja">
     </div>
     
