@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repasoSolo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+        body{
+            background-color: yellow;
+         
+        }
+        #caja{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #caja div{
+            width: 15%;
+
+        }
+        img{
+            max-width: 100px;
+        }
+       button{
+            background-color: yellowgreen;
+            border:dotted rgb(0, 0, 0);
+          font-size: 150%;
+          font-family: "Freeman", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            width: 150px;
+        }
+
+
+    </style>
+    <script>
+            let img=["bombum.png","espejo.png","gorra.png","llavero.png","sacapuntas.png","tenedor.png"]
+            let cantidad=img.length
+    
+        function iniciar() {
+            document.querySelector("#mas").onclick=mas
+            document.querySelector("#mostrarTodo").onclick=mostrarTodo
+        }
+        function mas() {
+
+            let ramdom=Math.floor(Math.random()*cantidad)
+            console.log(ramdom)
+            document.querySelector("#caja").innerHTML+=`<div><img src="./img/${img[ramdom]}" alt=""></div>`
+
+        }
+        function mostrarTodo() {
+            
+        }
+        window.onload=iniciar
+    </script>
+</head>
+<body>
+    <button id="mas">Mas</button>
+    <!-- disabled  desabita el boton-->
+    <button id="mostrarTodo" disabled>Mostrar Todo</button>
+    <div id="caja"></div>
+</body>
+</html>
