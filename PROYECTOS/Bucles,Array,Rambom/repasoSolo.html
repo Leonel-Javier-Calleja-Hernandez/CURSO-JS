@@ -4,35 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>repasoSolo</title>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
         body{
             background-color: yellow;
-         
+            
         }
+
+        button{
+         background-color: yellowgreen;
+         border:dotted rgb(0, 0, 0);
+         font-size: 150%;
+         font-family: "Freeman", sans-serif;
+         font-weight: 400;
+         font-style: normal;
+         width: 200px;
+         }
+        
         #caja{
-            display: flex;
-            flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
         }
+
         #caja div{
-            width: 15%;
+        width: 15%;
 
         }
+        
         img{
-            max-width: 100px;
-        }
-       button{
-            background-color: yellowgreen;
-            border:dotted rgb(0, 0, 0);
-          font-size: 150%;
-          font-family: "Freeman", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            width: 200px;
+        max-width: 100px;
         }
 
 
     </style>
+
     <script>
             let img=["bombum.png","espejo.png","gorra.png","llavero.png","sacapuntas.png","tenedor.png"]
             let cantidad=img.length
@@ -44,12 +51,14 @@
             document.querySelector("#mas").onclick=mas
             document.querySelector("#mostrarTodo").onclick=mostrarTodo
         }
+
         function mas() {
             if (imgNumero.length==img.length) {
-                document.querySelector("#caja").innerHTML=""
-                document.querySelector("#mas").disabled=true
-                imgNumero=[]
-            }
+            document.querySelector("#caja").innerHTML=""
+            document.querySelector("#mas").disabled=true
+            imgNumero=[]
+        }
+
             do{
                 ramdom=Math.floor(Math.random()*cantidad)
             }while (imgNumero.indexOf(ramdom)>=0) 
@@ -70,15 +79,12 @@
          console.log(imgNumero.length)
             }
             
-
-    
         function mostrarTodo() {
+
             document.querySelector("#caja").innerHTML=""
-            for (let k = img.length-1; k >= 0; k--) {
-                
+
+            for (let k = img.length-1; k >= 0; k--) {  
             document.querySelector("#caja").innerHTML+=`<div><img src="./img/${img[imgNumero[k]]}" alt=""></div>`
-            
-            
             }
            
         }
@@ -87,9 +93,9 @@
 </head>
 <body>
     <button id="mas">Mas</button>
-    <!-- disabled  desabita el boton-->
     <button id="mostrarTodo" disabled>Mostrar Todo</button>
     <button id="posicionAnterior">posicion Anterior</button>
+
     <div id="caja"></div>
 </body>
 </html>
