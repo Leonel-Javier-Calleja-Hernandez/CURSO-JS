@@ -32,7 +32,7 @@
         width: 15%;
 
         }
-        
+
         img{
         max-width: 100px;
         }
@@ -50,6 +50,7 @@
         function iniciar() {
             document.querySelector("#mas").onclick=mas
             document.querySelector("#mostrarTodo").onclick=mostrarTodo
+            document.querySelector("#posicionAnterior").onclick=posicionAnterior
         }
 
         function mas() {
@@ -74,7 +75,6 @@
             
             if (imgNumero.length==img.length) {
             document.querySelector("#mostrarTodo").disabled=false;
-        
          }
          console.log(imgNumero.length)
             }
@@ -86,7 +86,17 @@
             for (let k = img.length-1; k >= 0; k--) {  
             document.querySelector("#caja").innerHTML+=`<div><img src="./img/${img[imgNumero[k]]}" alt=""></div>`
             }
-           
+            document.querySelector("#posicionAnterior").disabled=false;
+            document.querySelector("#mostrarTodo").disabled=true;
+        }
+
+        function posicionAnterior() {
+            document.querySelector("#caja").innerHTML=""
+            for (let k =0;k<=img.length-1;k++) {  
+            document.querySelector("#caja").innerHTML+=`<div><img src="./img/${img[imgNumero[k]]}" alt=""></div>`
+            }
+            document.querySelector("#posicionAnterior").disabled=true;
+            document.querySelector("#mostrarTodo").disabled=false;
         }
         window.onload=iniciar
     </script>
@@ -94,7 +104,7 @@
 <body>
     <button id="mas">Mas</button>
     <button id="mostrarTodo" disabled>Mostrar Todo</button>
-    <button id="posicionAnterior">posicion Anterior</button>
+    <button id="posicionAnterior" disabled>posicion Anterior</button>
 
     <div id="caja"></div>
 </body>
