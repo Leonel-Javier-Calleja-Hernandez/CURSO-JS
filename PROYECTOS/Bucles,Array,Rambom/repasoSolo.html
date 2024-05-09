@@ -28,7 +28,7 @@
           font-family: "Freeman", sans-serif;
             font-weight: 400;
             font-style: normal;
-            width: 150px;
+            width: 200px;
         }
 
 
@@ -36,20 +36,51 @@
     <script>
             let img=["bombum.png","espejo.png","gorra.png","llavero.png","sacapuntas.png","tenedor.png"]
             let cantidad=img.length
+            let imgNumero=[]
+            let imgN=0
+          
     
         function iniciar() {
             document.querySelector("#mas").onclick=mas
             document.querySelector("#mostrarTodo").onclick=mostrarTodo
         }
         function mas() {
+            if (imgNumero.length==img.length) {
+                document.querySelector("#caja").innerHTML=""
+                document.querySelector("#mas").disabled=true
+                imgNumero=[]
+            }
+            do{
+                ramdom=Math.floor(Math.random()*cantidad)
+            }while (imgNumero.indexOf(ramdom)>=0) 
 
-            let ramdom=Math.floor(Math.random()*cantidad)
-            console.log(ramdom)
+            imgNumero.push(ramdom)
+            imgN++
             document.querySelector("#caja").innerHTML+=`<div><img src="./img/${img[ramdom]}" alt=""></div>`
-
-        }
-        function mostrarTodo() {
             
+            if(imgNumero.length<6){
+            document.querySelector("#mas").disabled=false
+            document.querySelector("#mostrarTodo").disabled=true
+         }
+            
+            if (imgNumero.length==img.length) {
+            document.querySelector("#mostrarTodo").disabled=false;
+        
+         }
+         console.log(imgNumero.length)
+            }
+            
+
+    
+        function mostrarTodo() {
+            document.querySelector("#caja").innerHTML=""
+            for (let k = img.length-1; k >= 0; k--) {
+                
+            document.querySelector("#caja").innerHTML+=`<div><img src="./img/${img[imgNumero[k]]}" alt=""></div>`
+            
+            
+            }
+           
         }
         window.onload=iniciar
     </script>
@@ -58,6 +89,7 @@
     <button id="mas">Mas</button>
     <!-- disabled  desabita el boton-->
     <button id="mostrarTodo" disabled>Mostrar Todo</button>
+    <button id="posicionAnterior">posicion Anterior</button>
     <div id="caja"></div>
 </body>
 </html>
