@@ -4,4 +4,48 @@ body {
     font-weight: 400;
     font-style: normal;
   }
-  
+img{
+    max-width: 15%;
+    vertical-align: top;
+}
+#linea1{
+display: flex;
+align-items: center;
+
+}
+#credito{
+color: rgb(255, 115, 0);
+line-height: 100px;
+}
+#dinero{
+font-size: 30px;
+
+}
+#simboloPeso{
+font-size: 20px;
+}
+#tirar{
+    width: 100px;
+    height: 100px;
+    border-radius: 55px;
+    background-color:rgb(245, 211, 183);;
+    border: 5px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    box-shadow: 0 0 10px black inset;
+
+}
+.botonAbajo{
+    width: 230px;
+    height: 30px;
+    border-radius: 10px;
+    background-color:rgb(245, 211, 183);;
+    border: 5px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    box-shadow: 0 0 10px black inset;
+}
