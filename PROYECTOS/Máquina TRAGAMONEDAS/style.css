@@ -16,26 +16,44 @@ align-items: center;
 #credito{
 color: rgb(255, 115, 0);
 line-height: 100px;
+font-size: 30px;
 }
 #dinero{
-font-size: 30px;
+font-size: 50px;
 
 }
 #simboloPeso{
-font-size: 20px;
+font-size: 30px;
 }
 #tirar{
-    width: 100px;
-    height: 100px;
-    border-radius: 55px;
-    background-color:rgb(245, 211, 183);;
+    width: 200px;
+    height:200px;
+    border-radius: 110px;
+    background-color:rgb(253, 230, 204);;
     border: 5px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 35px;
+    font-size: 55px;
     box-shadow: 0 0 10px black inset;
-
+    /* user-select: none; es para que el usuario no pueda seleccionar el texto*/
+    user-select: none;
+    -moz-user-select: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 20px;
+}
+header{
+    border:  solid 1px red;
+    height:225px;
+    position: relative;
+}
+#ventanas{
+    display: flex;
+    justify-content: space-around;
 }
 .botonAbajo{
     width: 230px;
