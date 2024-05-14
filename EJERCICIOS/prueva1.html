@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+	<title>Rey Ervigio Calculator  https://html6.es/curso/repte3</title>
+	<style type="text/css">
+		body,input,button{
+			font-family: 'Prompt', sans-serif;
+		}
+		input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button { 
+	  		-webkit-appearance: none; 
+	  		margin: 0; 
+		}
+		input[type=number] { -moz-appearance:textfield; }
+		input{
+			padding:3px 6px 4px 0px;
+			border-radius:5px 0 0 5px;
+			outline:none;
+			border:1px solid #f60;
+			font-size:1.3em;
+			color:white;
+			background-color:#f60;
+			font-weight:bold;
+			text-align:right;
+			width:75px;
+		}
+		::placeholder{
+			font-weight:normal;
+			color:white;
+			font-size:0.8em;
+		}
+		.linea1{
+			display:flex;
+			align-items:center;
+		}
+		.caja_boton{
+			height:41px;
+			border:1px solid #f60;
+			background-color:#f60;
+			border-radius:0 5px 5px 0;
+			box-sizing:border-box;
+			padding:8px 14px 0 8px;
+			margin-top:-1px;
+			margin-right:15px;
+		}
+		#boton{
+			border-radius:3px;
+			background-color:white;
+			font-size:0.9em;
+			border:none;
+			padding:2px 11px;
+		}
+		#boton:hover{
+			background-color:rgba(0,0,0,0.3);
+			cursor:pointer;
+			color:white;
+		}
+		#cantidades{
+			margin-top:20px;
+			cursor:pointer;
+			user-select:none;
+		}
+		.linea{
+			display:flex;
+		}
+		.uno{
+			width:30px;			
+			text-align:right;
+		}
+		.dos,.cuatro{
+			width:23px;
+		}
+		.tres{
+			width:50px;
+			text-align:right;
+		}
+		.cinco{
+			width:68px;						
+			text-align:right;
+		}
+		.dos, .cuatro{
+			margin-left:3px;
+			margin-right:3px;
+		}
+		body{
+			text-align:center;
+		}
+		section{
+			border-radius:8px;
+			border:2px dotted orange;
+			padding:20px 20px 25px 20px;
+			display:inline-block;			
+		}
+		#suma_total{
+			font-size:1.2em;
+			font-weight: bold;						
+			margin-top:4px;
+			text-align:right;					
+			width:205px;
+		}
+	</style>
+	<script type="text/javascript">
+        window.onload=inicio
+        let totalSumaIva=[]
+	function inicio() {
+        document.querySelector("#boton").addEventListener("click",calcular)
+    }
+    function calcular() {
+        let I=Number(document.querySelector("#cantidad").value)
+        let totalIva=0
+        iva()
+        function iva() {
+            totalIva=I*0.21
+            return totalIva
+        }
+        document.querySelector("#resultado").innerHTML=`<h2>el IVA de ${I} es de ${totalIva}</h2>`
+        document.querySelector("#cantidades").innerHTML+=`<div class="linea">
+            <div class="uno">${I}</div><div class="dos"> + </div><div class="tres">${totalIva}</div><div class="cuatro"> = </div><div class="cinco">${I+totalIva}</div>
+            </div>`
+            sumarTotal()
+            function sumarTotal() {
+            if (totalSumaIva.length>=5) {
+                document.querySelector("#cantidades").innerHTML=""
+                document.querySelector("#cantidades").innerHTML+=`<div class="linea">
+            <div class="uno">${I}</div><div class="dos"> + </div><div class="tres">${totalIva}</div><div class="cuatro"> = </div><div class="cinco">${I+totalIva}</div>
+            </div>`
+                totalSumaIva.splice(0,5)
+                console.log(totalSumaIva)
+            }
+        totalSumaIva.push(I+totalIva)
+        let total =totalSumaIva.reduce((a, c) => a + c)
+        document.querySelector("#suma_total").innerHTML=`<h2>Total = ${Number(total.toFixed(2))}</h2>`
+    }
+    }
+
+   
+    </script>
+</head>	
+<body>
+<section>
+<div class="linea1">
+	<label for="cantidad"></label>
+	<input type="text" id="cantidad" placeholder="Preu" autofocus maxlength="3"/>
+	<div class="caja_boton">
+		<button id="boton">Calcular l'IVA</button>
+	</div>
+	<div id="resultado"></div>
+</div>
+<div id="cantidades"></div>
+<div id="suma_total"></div>
+</section>
+</body>
+</html>
