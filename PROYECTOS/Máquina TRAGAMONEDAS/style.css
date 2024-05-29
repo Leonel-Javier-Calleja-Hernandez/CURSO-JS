@@ -3,10 +3,17 @@ body {
     font-family: "Pacifico", cursive;
     font-weight: 400;
     font-style: normal;
+    margin: auto;
   }
 img{
-    max-width: 15%;
+    max-width: 100%;
     vertical-align: top;
+}
+
+/* header 👇*/
+header{
+    height:220px;
+    position: relative;
 }
 #linea1{
 display: flex;
@@ -19,51 +26,112 @@ line-height: 100px;
 font-size: 30px;
 }
 #dinero{
-font-size: 50px;
+font-size: 3em;
 
 }
 #simboloPeso{
 font-size: 30px;
 }
+/* div id="tirar" 👇*/
 #tirar{
     width: 200px;
     height:200px;
-    border-radius: 110px;
-    background-color:rgb(253, 230, 204);;
+    border-radius: 50%;
     border: 5px solid red;
+    background-color:rgb(253, 230, 204);;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 55px;
-    box-shadow: 0 0 10px black inset;
-    /* user-select: none; es para que el usuario no pueda seleccionar el texto*/
-    user-select: none;
-    -moz-user-select: none;
-    cursor: pointer;
+    font-size: 4em;
+    box-shadow: 0 0 13px black inset;
     position: absolute;
     right: 0;
     left: 0;
     margin: auto;
     top: 20px;
+    cursor: pointer;
+    -moz-user-select: none;
+    /* user-select: none; es para que el usuario no pueda seleccionar el texto*/
+    user-select: none;
 }
-header{
-    border:  solid 1px red;
-    height:225px;
-    position: relative;
+#monedas{
+    margin: 10px 0px 0px 20spx;
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
 }
+#monedas img{
+width: 40px;
+}
+
+/* section id="ventanas" */
+
 #ventanas{
     display: flex;
     justify-content: space-around;
 }
-.botonAbajo{
-    width: 230px;
-    height: 30px;
+.ventana{
+    width: 175px;
+}
+.imagen{
+    border: 4px solid crimson;
     border-radius: 10px;
-    background-color:rgb(245, 211, 183);;
+    padding: 30px;
+}
+.botonAbajo{
+    width: 168px;
+    height: 75px;
+    border-radius: 10px;
+    background-color: #f5d3b7;
     border: 5px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 35px;
+    font-size: 28px;
     box-shadow: 0 0 10px black inset;
+    margin-top: 12px;
+    user-select: none;
+    -moz-user-select: none;
+    cursor: pointer;
+}
+/* hover Botones */
+#tirar:hover, .botonAbajo:hover{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px crimson inset;
+    text-shadow: 0px 0px 10px #f5d3b7 ;
+    color: #000000;
+}
+/* el mensaje velo */
+#velo{
+    background-color:#ffffff99 ;
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-content: center;
+    justify-content: center;
+}
+#x{
+width: 40px;
+position: absolute;
+right: 2px;
+top: 2px;
+cursor: pointer;
+}
+#cuadroMensajes{
+    background-color: #ffffff;
+    border: 5px solid red;
+    width: 500px;
+    border-radius: 12px;
+    position: relative;
+    height: 100px;
+
+}
+#mensaje{
+    text-align: center;
+    font-size: 1.6em;
+}
+#mensaje img{
+    width: 5%;
 }
