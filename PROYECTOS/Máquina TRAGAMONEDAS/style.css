@@ -111,6 +111,8 @@ width: 40px;
     display: none;
     align-content: center;
     justify-content: center;
+    user-select: none;
+    -moz-user-select:none ;
 }
 #x{
 width: 40px;
@@ -126,6 +128,9 @@ cursor: pointer;
     border-radius: 12px;
     position: relative;
     height: 100px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
 
 }
 #mensaje{
@@ -134,4 +139,5 @@ cursor: pointer;
 }
 #mensaje img{
     width: 5%;
+    margin: 2px;
 }
