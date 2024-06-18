@@ -59,6 +59,8 @@ font-size: 30px;
     display: flex;
     flex-wrap: wrap;
     width: 250px;
+    overflow: hidden;
+    height: 100px;
 }
 #monedas img{
 width: 40px;
