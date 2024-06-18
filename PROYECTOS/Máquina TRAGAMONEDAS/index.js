@@ -9,6 +9,10 @@ function inicio() {
     document.getElementById("tirar").onclick=Tirar_Inicio
     document.getElementById("x").onclick=cerrar
     au=document.querySelector("#sonido");
+    for (let k = 0; k < document.getElementsByClassName("botonAbajo").length; k++) {
+      document.getElementsByClassName("botonAbajo")[k].onclick=lanzar_uno
+        
+    }
 }
 
 function Tirar_Inicio() {
@@ -22,7 +26,7 @@ function Tirar_Inicio() {
     comparar()
 }
 function lanzar_uno() {
-    
+    this.style.opacity="0.2";
 }
 function escojer_numero() {
     // pensara un numero entre la cantidad de elementos que hay en el array imagenes y lo devuelve con return
